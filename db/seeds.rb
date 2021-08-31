@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'nokogiri'
+require 'open-uri'
+
+url = "https://www.imdb.com/list/ls062911411/"
+html = Nokogiri::HTML(URI.open(url).read, nil, 'utf-8')
+
+html.search('.lister-item-content').each do |element|
+  Movie.create!(title: element.search("h3 a").text.strip, genre: element.search(".genre").text.strip)
+  puts "movie created"
+end

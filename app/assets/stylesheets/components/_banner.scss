@@ -1,0 +1,15 @@
+.banner-container {
+  width: 1000px;
+  padding-top: 160px;
+}
+.banner {
+  margin-top: 0;
+  background-image: linear-gradient(rgba(77, 76, 76, 0.5), rgba(0, 0, 0, 0.5)), url("movies.jpeg");
+  background-repeat: no-repeat;
+  height: 70vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 8px solid #222;
+}

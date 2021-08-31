@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+h1 {
+  color: white;
+  text-align: center;
+}
+p {
+  color: white;
+  text-align: center;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    right: 11%;
+}
+.movies-image {
+  background-image: url("movies.jpeg") ;
+  background-repeat: no-repeat;
+  height: 80vh;
+  background-size: cover;
+  position: relative;
+}

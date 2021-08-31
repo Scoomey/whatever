@@ -1,16 +1,41 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+// poppins fonts
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
-
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+@font-face {
+  font-family: "Poppins";
+  src: font-url('Poppins/Poppins-Medium.eot');
+  src: font-url('Poppins/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+  font-url('Poppins/Poppins-Medium.woff') format('woff'),
+  font-url('Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: font-url('Poppins/Poppins-Light.eot');
+  src: font-url('Poppins/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+  font-url('Poppins/Poppins-Light.woff') format('woff'),
+  font-url('Poppins/Poppins-Light.ttf') format('truetype');
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "Poppins";
+  src: font-url('Poppins/Poppins-Bold.eot');
+  src: font-url('Poppins/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+  font-url('Poppins/Poppins-Bold.woff') format('woff'),
+  font-url('Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Poppins";
+  src: font-url('Poppins/Poppins-BoldItalic.eot');
+  src: font-url('Poppins/Poppins-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  font-url('Poppins/Poppins-BoldItalic.woff') format('woff'),
+  font-url('Poppins/Poppins-BoldItalic.ttf') format('truetype');
+  font-weight: bold Italic;
+}
+
+$my-font: "Poppins";
+$body-font: $my-font;
+$headers-font: $my-font;

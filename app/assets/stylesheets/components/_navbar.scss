@@ -11,6 +11,12 @@
     margin-top: -20px;
   }
 }
+.dropdown{
+  a {
+    color: $black !important;
+
+  }
+}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;

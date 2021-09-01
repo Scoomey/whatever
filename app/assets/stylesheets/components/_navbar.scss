@@ -4,6 +4,7 @@
   position: fixed;
   width: 100vw;
   height: 100px;
+  z-index: 5;
   a{
     color: $white !important;
   }
@@ -14,7 +15,6 @@
 .dropdown{
   a {
     color: $black !important;
-
   }
 }
 

@@ -4,11 +4,17 @@
   position: fixed;
   width: 100vw;
   height: 100px;
+  z-index: 5;
   a{
     color: $white !important;
   }
   .nav-item {
     margin-top: -20px;
+  }
+}
+.dropdown{
+  a {
+    color: $black !important;
   }
 }
 

@@ -7,3 +7,46 @@ p {
   color: white;
   text-align: center;
 }
+.mood {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 8px solid #222;
+}
+
+.mood-text{
+  padding: 10px;
+}
+
+.mood-images{
+  height: 300px;
+  width: 300px;
+  margin: 60px;
+  background-size: cover;
+  background-position: center;
+}
+
+.food {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.food-images {
+  height: 300px;
+  width: 300px;
+  margin: 60px;
+  background-size: cover;
+  background-position: center;
+}
+.scroll-btn i{
+  position: fixed;
+  bottom: 20px;
+  right:20px;
+  padding:7px 12px;
+  background:blue;
+  color:white;
+  font-size: 15px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0,0,0,15);
+}

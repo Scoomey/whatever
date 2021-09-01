@@ -1,5 +1,11 @@
 <br>
 <br>
-<h1>pairings show page</h1>
+<h1>Pairings Show Page</h1>
 <br>
-<%= render 'shared/moviecard' %>
+<div class="pairings_container" style="display: flex; justify-content: center">
+  <%= render 'shared/moviecard' %>
+  <div style="zindex: 3; align-self: center;">
+    <%= image_tag 'highfive.gif' %>
+  </div>
+  <%= render 'shared/foodcard' %>
+</div>

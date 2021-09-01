@@ -1,3 +1,3 @@
 class Movie < ApplicationRecord
-  has_many :pairing
+  has_many :pairings
 end

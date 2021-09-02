@@ -1,0 +1,18 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+
+<%= form_for :otp , url:otp_path do |f| %>
+  <%= f.label :Fantasy %>
+  <%= f.check_box :Fantasy, {}, 'Fantasy', false %>
+  <%= f.label :Thriller %>
+  <%= f.check_box :Thriller, {}, 'Thriller', false  %>
+  <%= f.label :crime %>
+  <%= f.check_box :crime , {}, 'Crime', false %>
+  <%= f.submit %>
+<% end %>
+</div>

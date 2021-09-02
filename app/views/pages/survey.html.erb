@@ -7,12 +7,13 @@
 <div class="container">
 
 <%= form_for :otp , url:otp_path do |f| %>
+
+  <%= f.check_box :Fantasy, {class: 'checkbox'}, 'Fantasy', false %>
   <%= f.label :Fantasy %>
-  <%= f.check_box :Fantasy, {}, 'Fantasy', false %>
+  <%= f.check_box :Thriller, {class: 'checkbox'}, 'Thriller', false  %>
   <%= f.label :Thriller %>
-  <%= f.check_box :Thriller, {}, 'Thriller', false  %>
-  <%= f.label :crime %>
-  <%= f.check_box :crime , {}, 'Crime', false %>
+  <%= f.check_box :Crime , {class: 'checkbox'}, 'Crime', false %>
+  <%= f.label :Crime %>
   <div class="middle">
   <div class="multi-range-slider">
     <input type="range" id="minyear" min="1930" max="2021" value="1930" name="otp[minyear]">

@@ -1,0 +1,15 @@
+.checkbox {
+  position: absolute;
+  transform: scale(0);
+}
+
+.checkbox + label {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  cursor:pointer;
+}
+
+.checkbox:checked + label {
+  background-color: red;
+}

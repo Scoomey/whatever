@@ -1,3 +1,3 @@
 class Food < ApplicationRecord
-  has many :pairing
+  has_many :pairing
 end

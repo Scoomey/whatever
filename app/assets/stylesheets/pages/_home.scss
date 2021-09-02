@@ -7,3 +7,35 @@ p {
   color: white;
   text-align: center;
 }
+.mood {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 8px solid #222;
+}
+
+.mood-text{
+  padding: 10px;
+}
+
+.mood-images{
+  height: 300px;
+  width: 300px;
+  margin: 60px;
+  background-size: cover;
+  background-position: center;
+}
+
+.food {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.food-images {
+  height: 300px;
+  width: 300px;
+  margin: 60px;
+  background-size: cover;
+  background-position: center;
+}

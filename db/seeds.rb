@@ -9,6 +9,7 @@
 require 'nokogiri'
 require 'open-uri'
 
+
 # url = "https://www.imdb.com/list/ls062911411/"
 # html = Nokogiri::HTML(URI.open(url).read, nil, 'utf-8')
 
@@ -34,4 +35,26 @@ html.search(".lister-item-content").each do |element|
 
   MovieGenre.create(movie: movie, genre: genre)
   end
+
+
+foods = ["Pizza", "Curry", "Succhi", " Ramen", "Full English",
+         "Mac and Cheese", "Chicken Tikka Masala", "Churros",
+         "Mooncake", "Pie and Chips", "Miso Soup", "Jacket Potato",
+         "Bruschetta", "Stew", "Pad Thai", "Quesadilla", "Kebab",
+         "Fondue", "Fajitas", "Burrito", "Burger and fries", "Panini",
+         "Grilled Cheese", "Linguini and clams", "Soufflé",
+         "Frozen Yogurt", "Frog legs", "Foie Gras", "Duck",
+         "Rice and Peas", "Jerk Chicken", "Satay", "Falafel Wrap",
+         "Poutine", "Chips Cheese Curry Sauce", "Pie and Mash",
+         "Toad In The Hole", "Spotted Dick", "Haggis",
+         "Peri Peri Chicken", "Rogan Josh", "Katsu curry",
+         "Spaghetti Bolognese", "Carbonara", "Fettuccine Alfredo",
+         "Dal ", "Panna Cotta", "Pulled Pork Sandwich", "Apple Pie",
+         "Karē", "Tapas", "Yakisoba", "Pizza Margherita"]
+
+foods.each do |food|
+  puts "creating food"
+  Food.create!(dish: food)
+  puts "finishing food"
+
 end

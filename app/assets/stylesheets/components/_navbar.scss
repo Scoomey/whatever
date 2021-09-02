@@ -3,8 +3,18 @@
   background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   position: fixed;
   width: 100vw;
+  height: 100px;
+  z-index: 5;
   a{
     color: $white !important;
+  }
+  .nav-item {
+    margin-top: -20px;
+  }
+}
+.dropdown{
+  a {
+    color: $black !important;
   }
 }
 
@@ -13,5 +23,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 30%;
+  margin-left: -10px;
+  margin-top: 5px;
 }

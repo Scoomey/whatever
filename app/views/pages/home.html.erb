@@ -1,11 +1,47 @@
+<div class="scroll-btn">
+<a href="#home"><i class="fas fa-arrow-up"></i></a>
+</div>
 <div class="banner">
   <div class="banner-container">
     <h1>Welcome to your movie finding journey </h1>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut mollitia ducimus saepe repellendus vel! Sed provident ex, saepe perferendis minima similique necessitatibus, soluta adipisci repudiandae, quae sunt facilis omnis mollitia.</p>
+    <button class="sign-up"><a href="/users/sign_up">Sign up</a></button>
   </div>
 </div>
 
-<div>
-   <h1>food that can match the movie your watching</h1>
-   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptate laudantium, voluptatum ex illum laboriosam libero. Neque molestias eligendi minima quam reiciendis cumque, tempore voluptate officiis quos deleniti voluptatibus nostrum.</p>
+<div class="mood">
+  <div class="mood-text">
+    <h1>Mood that can match the movie your watching</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptate laudantium, voluptatum ex illum laboriosam libero. Neque molestias eligendi minima quam reiciendis cumque, tempore voluptate officiis quos deleniti voluptatibus nostrum.</p>
+  </div>
+
+  <div class="Carousel-images" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+
+      <div class="mood-images" style="background-image: url(<%= image_path 'happy.jpeg' %>)"></div>
+    </div>
+    <div class="carousel-item">
+      <div class="mood-images" style="background-image: url(<%= image_path 'sad.jpeg' %>)"></div>
+    </div>
+    <div class="carousel-item">
+      <div class="mood-images" style="background-image: url(<%= image_path 'angry.jpeg' %>)"></div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+<div class="food">
+
+  <div class="food-images" style="background-image: url(<%= image_path 'food.jpeg' %>)"></div>
+
+
+ <div class="food-text">
+    <h1>Food time</h1>
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam veritatis quasi, repudiandae enim suscipit quos sunt necessitatibus vel quia quae fugiat nobis </p>
+ </div>
+
 </div>

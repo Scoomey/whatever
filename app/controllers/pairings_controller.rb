@@ -40,18 +40,18 @@ class PairingsController < ApplicationController
   def otp
     @movies = Movie.joins(:genres).select { |movie| movie.genres.map(&:name).any? { |genre| params[:otp].values.include?(genre)} }.uniq
     # @movies = Movie.select { |movie| movie.year <= minyear && movie.year >= maxyear }
-    @movies = @movies.sample
+    @movie = @movies.sample
 
-    url = "http://www.omdbapi.com/?t=#{@movies.title}=#{@movies.year}&apikey=b4c15d98"
+    url = "http://www.omdbapi.com/?t=#{@movie.title}&y=#{@movie.year}&apikey=b4c15d98"
     movie_url = URI.open(url).read
     movie_json = JSON.parse(movie_url)
+    @movie_json = JSON.parse(movie_url)
 
     @title = movie_json["Title"]
     @plot = movie_json["Plot"]
     @year = movie_json["Year"]
     @genre = movie_json["Genre"]
     @poster = movie_json["Poster"]
-
     @foods = Food.all.sample
   end
 

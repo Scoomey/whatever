@@ -1,15 +1,48 @@
+.genres {
+  width: 950px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .checkbox {
   position: absolute;
   transform: scale(0);
 }
 
 .checkbox + label {
-  width: 100px;
-  height: 100px;
-  background-color: white;
+  width: 310px;
+  height: 200px;
+  background-color: #f8f7f2;
+  color: #810000;
   cursor:pointer;
+  text-align: center;
+  padding-top: 70px;
+  border-radius: 10px;
+  font-size: 40px;
 }
 
 .checkbox:checked + label {
-  background-color: red;
+  background-color: #810000;
+  color: #f8f7f2;
+  border-radius: 10px;
+  text-align: center;
+  transform: scale(95%);
+}
+
+.slider-container {
+  width: 750px;
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+  h2 {
+    margin-bottom: 100px;
+  }
+}
+
+.submit-btn {
+  margin: 0 auto;
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 50px;
 }

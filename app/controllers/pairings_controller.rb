@@ -37,7 +37,6 @@ class PairingsController < ApplicationController
   def otp
     @movies = Movie.joins(:genres).select { |movie| movie.genres.map(&:name).any? { |genre| params[:otp].values.include?(genre)} }.uniq
   # @movies = Movie.select { |movie| movie.year <= minyear && movie.year >= maxyear }
-
     @movies = @movies.sample
     @foods = Food.all.sample
   end

@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   resources :foods, only: :show
 
   resources :pairings, except: :destroy
+
+  get "survey", to: "pages#survey"
+  post "otp", to: "pairings#otp"
 end

@@ -9,15 +9,33 @@
 require 'nokogiri'
 require 'open-uri'
 
+
+# url = "https://www.imdb.com/list/ls062911411/"
+# html = Nokogiri::HTML(URI.open(url).read, nil, 'utf-8')
+
+# html.search('.lister-item-content').each do |element|
+#   Movie.create!(title: element.search("h3 a").text.strip)
+#   element.search(".genre").text.strip.split(', ').each do |sub_genre|
+#     genre = Genre.find_or_create_by(name: sub_genre)
+#     MovieGenre.create movie: movie, genre: genre
+#   end
+#   puts "movie created"
+# end
+
 url = "https://www.imdb.com/search/title/?count=100&groups=top_1000&sort=user_rating"
-html = Nokogiri::HTML(URI.open(url).read, nil, 'utf-8')
+html = Nokogiri::HTML(URI.open(url).read, nil, "utf-8")
+
 html.search(".lister-item-content").each do |element|
-  title = element.search("h3 a").text.strip
-  genre = element.search(".genre").text.strip
-  year = element.search(".lister-item-year").text.strip
-  year = year[1..4].to_i
-  Movie.new(title: title, genre: genre, year: year)
-end
+    title = element.search("h3 a").text.strip
+    year = element.search(".lister-item-year").text.strip
+    year = year[1..4].to_i
+    movie = Movie.new(title: title, year: year)
+  element.search(".genre").text.strip.split(', ').each do |sub_genre|
+  genre = Genre.find_or_create_by(name: sub_genre)
+
+  MovieGenre.create(movie: movie, genre: genre)
+  end
+
 
 foods = ["Pizza", "Curry", "Succhi", " Ramen", "Full English",
          "Mac and Cheese", "Chicken Tikka Masala", "Churros",
@@ -38,4 +56,5 @@ foods.each do |food|
   puts "creating food"
   Food.create!(dish: food)
   puts "finishing food"
+
 end

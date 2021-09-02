@@ -35,7 +35,7 @@ html.search(".lister-item-content").each do |element|
 
   MovieGenre.create(movie: movie, genre: genre)
   end
-
+end
 
 foods = ["Pizza", "Curry", "Succhi", " Ramen", "Full English",
          "Mac and Cheese", "Chicken Tikka Masala", "Churros",

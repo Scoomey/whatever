@@ -11,7 +11,6 @@
     text-decoration: none;
   }
 }
-
 .sign-up:before,
 .sign-up:after {
   border: 0 solid transparent;
@@ -21,24 +20,20 @@
   position: absolute;
   width: 24px;
 }
-
 .sign-up:before {
   border-top: 3px solid #f8f7f2;
   right: 0;
   top: -4px;
 }
-
 .sign-up:after {
   border-bottom: 3px solid #f8f7f2;
   bottom: -4px;
   left: 0;
 }
-
 .sign-up:hover:before,
 .sign-up:hover:after {
   width: 100%;
 }
-
 .scroll-btn i{
   position: fixed;
   bottom: 20px;

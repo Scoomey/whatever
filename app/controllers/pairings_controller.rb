@@ -1,3 +1,6 @@
+require 'json'
+require 'open-uri'
+
 class PairingsController < ApplicationController
     before_action :set_pairing, only: [:show, :edit, :update]
 
@@ -38,6 +41,17 @@ class PairingsController < ApplicationController
     @movies = Movie.joins(:genres).select { |movie| movie.genres.map(&:name).any? { |genre| params[:otp].values.include?(genre)} }.uniq
     # @movies = Movie.select { |movie| movie.year <= minyear && movie.year >= maxyear }
     @movies = @movies.sample
+
+    url = "http://www.omdbapi.com/?t=#{@movies.title}=#{@movies.year}&apikey=b4c15d98"
+    movie_url = URI.open(url).read
+    movie_json = JSON.parse(movie_url)
+
+    @title = movie_json["Title"]
+    @plot = movie_json["Plot"]
+    @year = movie_json["Year"]
+    @genre = movie_json["Genre"]
+    @poster = movie_json["Poster"]
+
     @foods = Food.all.sample
   end
 

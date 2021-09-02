@@ -13,6 +13,30 @@
   <%= f.check_box :Thriller, {}, 'Thriller', false  %>
   <%= f.label :crime %>
   <%= f.check_box :crime , {}, 'Crime', false %>
+  <div class="middle">
+  <div class="multi-range-slider">
+    <input type="range" id="minyear" min="1930" max="2021" value="1930" name="otp[minyear]">
+
+    <input type="range" id="maxyear" min="1930" max="2021" value="2021" name="otp[maxyear]">
+
+
+    <div class="slider">
+      <div class="track"></div>
+      <div class="range"></div>
+      <div class="thumb left"></div>
+      <div class="thumb right"></div>
+    </div>
+    <div class="output1">
+      <output id="output1"></output>
+    </div>
+    <div class="output2">
+      <output id="output2"></output>
+    </div>
+  </div>
+</div>
   <%= f.submit %>
 <% end %>
+
+
+
 </div>

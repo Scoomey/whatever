@@ -24,13 +24,14 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import "fetch.js"
 import { searchMovies } from "./fetch";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { slider, displayValue } from "./slider";
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-
+  slider();
+  displayValue();
 });

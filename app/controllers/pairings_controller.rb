@@ -45,13 +45,13 @@ class PairingsController < ApplicationController
     url = "http://www.omdbapi.com/?t=#{@movies.title}&y=#{@movies.year}&apikey=b4c15d98"
     movie_url = URI.open(url).read
     movie_json = JSON.parse(movie_url)
+    @movie_json = JSON.parse(movie_url)
 
     @title = movie_json["Title"]
     @plot = movie_json["Plot"]
     @year = movie_json["Year"]
     @genre = movie_json["Genre"]
     @poster = movie_json["Poster"]
-
     @foods = Food.all.sample
   end
 

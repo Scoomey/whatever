@@ -4,72 +4,78 @@
 <br>
 <br>
 
-<div class="survey-container">
+<div class="container">
+  <%= form_for :otp , url:otp_path do |f| %>
+  <div class="genres">
+    <%= f.check_box :Fantasy, {class: 'checkbox'}, 'Fantasy', false %>
+    <%= f.label :Fantasy %>
+    <%= f.check_box :Thriller, {class: 'checkbox'}, 'Thriller', false  %>
+    <%= f.label :Thriller %>
+    <%= f.check_box :crime , {class: 'checkbox'}, 'Crime', false %>
+    <%= f.label :crime %>
+    <%= f.check_box :War, {class: 'checkbox'}, 'War', false  %>
+    <%= f.label :War %>
+    <%= f.check_box :Action, {class: 'checkbox'}, 'Action', false  %>
+    <%= f.label :Action %>
+    <%= f.check_box :Biography, {class: 'checkbox'}, 'Biography', false  %>
+    <%= f.label :Biography %>
+    <%= f.check_box :Adventure, {class: 'checkbox'}, 'Adventure', false  %>
+    <%= f.label :Adventure %>
+    <%= f.check_box :History, {class: 'checkbox'}, 'History', false  %>
+    <%= f.label :History %>
+    <%= f.check_box :SciFi, {class: 'checkbox'}, 'Sci-Fi', false  %>
+    <%= f.label :SciFi %>
+    <%= f.check_box :Romance, {class: 'checkbox'}, 'Romance', false  %>
+    <%= f.label :Romance %>
+    <%= f.check_box :Western, {class: 'checkbox'}, 'Western', false  %>
+    <%= f.label :Western %>
+    <%= f.check_box :Comedy, {class: 'checkbox'}, 'Comedy', false  %>
+    <%= f.label :Comedy %>
+    <%= f.check_box :Animation, {class: 'checkbox'}, 'Animation', false  %>
+    <%= f.label :Animation %>
+    <%= f.check_box :Family, {class: 'checkbox'}, 'Family', false  %>
+    <%= f.label :Family %>
+    <%= f.check_box :Mystery, {class: 'checkbox'}, 'Mystery', false  %>
+    <%= f.label :Mystery %>
+    <%= f.check_box :Music, {class: 'checkbox'}, 'Music', false  %>
+    <%= f.label :Music %>
+    <%= f.check_box :Horror, {class: 'checkbox'}, 'Horror', false  %>
+    <%= f.label :Horror %>
+    <%= f.check_box :FilmNoir, {class: 'checkbox'}, 'Film-Noir', false  %>
+    <%= f.label :FilmNoir %>
+  </div>
+  <div class="slider-container">
+    <h2>Filter movies based on release year?</h2>
+    <div class="multi-range-slider">
+      <input type="range" id="minyear" min="1930" max="2021" value="1930" name="otp[minyear]">
+      <input type="range" id="maxyear" min="1930" max="2021" value="2021" name="otp[maxyear]">
 
-
-<%= form_for :otp , url:otp_path do |f| %>
-<div class="genres">
-  <%= f.check_box :Fantasy, {class: 'checkbox', id: 'fantasy'}, 'Fantasy', false %>
-  <%= f.label :Fantasy %>
-  <%= f.check_box :Thriller, {class: 'checkbox', id: 'thriller'}, 'Thriller', false  %>
-  <%= f.label :Thriller %>
-  <%= f.check_box :crime , {class: 'checkbox', id: 'crime'}, 'Crime', false %>
-  <%= f.label :crime %>
-  <%= f.check_box :War, {class: 'checkbox', id: 'war'}, 'War', false  %>
-  <%= f.label :War %>
-  <%= f.check_box :Action, {class: 'checkbox', id: 'action'}, 'Action', false  %>
-  <%= f.label :Action %>
-  <%= f.check_box :Biography, {class: 'checkbox', id: 'biography'}, 'Biography', false  %>
-  <%= f.label :Biography %>
-  <%= f.check_box :Adventure, {class: 'checkbox', id: 'adventure'}, 'Adventure', false  %>
-  <%= f.label :Adventure %>
-  <%= f.check_box :History, {class: 'checkbox', id: 'history'}, 'History', false  %>
-  <%= f.label :History %>
-  <%= f.check_box :SciFi, {class: 'checkbox', id: 'scifi'}, 'Sci-Fi', false  %>
-  <%= f.label :SciFi %>
-  <%= f.check_box :Romance, {class: 'checkbox', id: 'romance'}, 'Romance', false  %>
-  <%= f.label :Romance %>
-  <%= f.check_box :Western, {class: 'checkbox', id: 'western'}, 'Western', false  %>
-  <%= f.label :Western %>
-  <%= f.check_box :Comedy, {class: 'checkbox', id: 'comedy'}, 'Comedy', false  %>
-  <%= f.label :Comedy %>
-  <%= f.check_box :Animation, {class: 'checkbox', id: 'animation'}, 'Animation', false  %>
-  <%= f.label :Animation %>
-  <%= f.check_box :Family, {class: 'checkbox', id: 'family'}, 'Family', false  %>
-  <%= f.label :Family %>
-  <%= f.check_box :Mystery, {class: 'checkbox', id: 'mystery'}, 'Mystery', false  %>
-  <%= f.label :Mystery %>
-  <%= f.check_box :Music, {class: 'checkbox', id: 'music'}, 'Music', false  %>
-  <%= f.label :Music %>
-  <%= f.check_box :Horror, {class: 'checkbox', id: 'horror'}, 'Horror', false  %>
-  <%= f.label :Horror %>
-  <%= f.check_box :FilmNoir, {class: 'checkbox', id: 'filmnoir'}, 'Film-Noir', false  %>
-  <%= f.label :FilmNoir %>
-</div>
-<div class="slider-container">
-  <h2>Filter movies based on release year?</h2>
-  <div class="multi-range-slider">
-    <input type="range" id="minyear" min="1930" max="2021" value="1930" name="otp[minyear]">
-    <input type="range" id="maxyear" min="1930" max="2021" value="2021" name="otp[maxyear]">
-
-    <div class="slider">
-      <div class="track"></div>
-      <div class="range"></div>
-      <div class="thumb left"></div>
-      <div class="thumb right"></div>
-    </div>
-    <div class="output1">
-      <output id="output1"></output>
-    </div>
-    <div class="output2">
-      <output id="output2"></output>
+      <div class="slider">
+        <div class="track"></div>
+        <div class="range"></div>
+        <div class="thumb left"></div>
+        <div class="thumb right"></div>
+      </div>
+      <div class="output1">
+        <output id="output1"></output>
+      </div>
+      <div class="output2">
+        <output id="output2"></output>
+      </div>
     </div>
   </div>
-</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-<div class="submit-btn">
-  <%= f.submit %>
-</div>
-<% end %>
+  <div class="buttoncontainer">
+    <%= button_tag do %>
+      <a class="bigredbutton"></a>
+    <% end %>
+  <% end %>
+  </div>
 
 </div>

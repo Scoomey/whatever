@@ -4,46 +4,46 @@
 <br>
 <br>
 
-<div class="container">
+<div class="survey-container">
 
 
 <%= form_for :otp , url:otp_path do |f| %>
 <div class="genres">
-  <%= f.check_box :Fantasy, {class: 'checkbox'}, 'Fantasy', false %>
+  <%= f.check_box :Fantasy, {class: 'checkbox', id: 'fantasy'}, 'Fantasy', false %>
   <%= f.label :Fantasy %>
-  <%= f.check_box :Thriller, {class: 'checkbox'}, 'Thriller', false  %>
+  <%= f.check_box :Thriller, {class: 'checkbox', id: 'thriller'}, 'Thriller', false  %>
   <%= f.label :Thriller %>
-  <%= f.check_box :crime , {class: 'checkbox'}, 'Crime', false %>
+  <%= f.check_box :crime , {class: 'checkbox', id: 'crime'}, 'Crime', false %>
   <%= f.label :crime %>
-  <%= f.check_box :War, {class: 'checkbox'}, 'War', false  %>
+  <%= f.check_box :War, {class: 'checkbox', id: 'war'}, 'War', false  %>
   <%= f.label :War %>
-  <%= f.check_box :Action, {class: 'checkbox'}, 'Action', false  %>
+  <%= f.check_box :Action, {class: 'checkbox', id: 'action'}, 'Action', false  %>
   <%= f.label :Action %>
-  <%= f.check_box :Biography, {class: 'checkbox'}, 'Biography', false  %>
+  <%= f.check_box :Biography, {class: 'checkbox', id: 'biography'}, 'Biography', false  %>
   <%= f.label :Biography %>
-  <%= f.check_box :Adventure, {class: 'checkbox'}, 'Adventure', false  %>
+  <%= f.check_box :Adventure, {class: 'checkbox', id: 'adventure'}, 'Adventure', false  %>
   <%= f.label :Adventure %>
-  <%= f.check_box :History, {class: 'checkbox'}, 'History', false  %>
+  <%= f.check_box :History, {class: 'checkbox', id: 'history'}, 'History', false  %>
   <%= f.label :History %>
-  <%= f.check_box :SciFi, {class: 'checkbox'}, 'Sci-Fi', false  %>
+  <%= f.check_box :SciFi, {class: 'checkbox', id: 'scifi'}, 'Sci-Fi', false  %>
   <%= f.label :SciFi %>
-  <%= f.check_box :Romance, {class: 'checkbox'}, 'Romance', false  %>
+  <%= f.check_box :Romance, {class: 'checkbox', id: 'romance'}, 'Romance', false  %>
   <%= f.label :Romance %>
-  <%= f.check_box :Western, {class: 'checkbox'}, 'Western', false  %>
+  <%= f.check_box :Western, {class: 'checkbox', id: 'western'}, 'Western', false  %>
   <%= f.label :Western %>
-  <%= f.check_box :Comedy, {class: 'checkbox'}, 'Comedy', false  %>
+  <%= f.check_box :Comedy, {class: 'checkbox', id: 'comedy'}, 'Comedy', false  %>
   <%= f.label :Comedy %>
-  <%= f.check_box :Animation, {class: 'checkbox'}, 'Animation', false  %>
+  <%= f.check_box :Animation, {class: 'checkbox', id: 'animation'}, 'Animation', false  %>
   <%= f.label :Animation %>
-  <%= f.check_box :Family, {class: 'checkbox'}, 'Family', false  %>
+  <%= f.check_box :Family, {class: 'checkbox', id: 'family'}, 'Family', false  %>
   <%= f.label :Family %>
-  <%= f.check_box :Mystery, {class: 'checkbox'}, 'Mystery', false  %>
+  <%= f.check_box :Mystery, {class: 'checkbox', id: 'mystery'}, 'Mystery', false  %>
   <%= f.label :Mystery %>
-  <%= f.check_box :Music, {class: 'checkbox'}, 'Music', false  %>
+  <%= f.check_box :Music, {class: 'checkbox', id: 'music'}, 'Music', false  %>
   <%= f.label :Music %>
-  <%= f.check_box :Horror, {class: 'checkbox'}, 'Horror', false  %>
+  <%= f.check_box :Horror, {class: 'checkbox', id: 'horror'}, 'Horror', false  %>
   <%= f.label :Horror %>
-  <%= f.check_box :FilmNoir, {class: 'checkbox'}, 'Film-Noir', false  %>
+  <%= f.check_box :FilmNoir, {class: 'checkbox', id: 'filmnoir'}, 'Film-Noir', false  %>
   <%= f.label :FilmNoir %>
 </div>
 <div class="slider-container">

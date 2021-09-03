@@ -1,8 +1,15 @@
+
+.survey-container {
+  margin: 0 auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .genres {
-  width: 950px;
+  width: 1400px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .checkbox {
@@ -11,38 +18,51 @@
 }
 
 .checkbox + label {
-  width: 310px;
-  height: 200px;
-  background-color: #f8f7f2;
-  color: #810000;
+  width: 275px;
+  height: 150px;
+  font-size: 0px;
+  // background-color: #f8f7f2;
+  // color: #810000;
   cursor:pointer;
-  text-align: center;
-  padding-top: 70px;
+  // background-image: url('crime.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  // text-align: center;
+  // padding-top: 70px;
   border-radius: 10px;
-  font-size: 40px;
+  // font-size: 40px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+}
+
+#crime {
+  background-image: url('crime.png');
 }
 
 .checkbox:checked + label {
-  background-color: #810000;
-  color: #f8f7f2;
-  border-radius: 10px;
-  text-align: center;
+  // background-color: #810000;
+  // color: #f8f7f2;
+  // border-radius: 10px;
+  // text-align: center;
   transform: scale(95%);
+  border: 3px solid #810000;
 }
 
 .slider-container {
   width: 750px;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 40px;
   text-align: center;
   h2 {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: $white;
   }
 }
 
 .submit-btn {
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 50px;
   text-align: center;
   margin-bottom: 50px;
 }

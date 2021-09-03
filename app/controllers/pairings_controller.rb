@@ -55,6 +55,10 @@ class PairingsController < ApplicationController
     @foods = Food.all.sample
   end
 
+  def random_saying
+    sayings = ["#{@title}, with #{@dish}, A Match made in heaven 😍", "Woah! #{@title}, and #{@dish}, who'd of thought?! 🧐", "#{@title}, and #{@dish} 4TW 👻", "#{@title}, and #{@dish}, can't argue with that?"]
+    sayings.sample
+  end
   private
 
   def set_pairing

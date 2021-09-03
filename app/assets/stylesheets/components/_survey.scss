@@ -24,7 +24,7 @@
   // background-color: #f8f7f2;
   // color: #810000;
   cursor:pointer;
-  // background-image: url('crime.png');
+  background-image: url('crime.png');
   background-repeat: no-repeat;
   background-size: cover;
   // text-align: center;
@@ -35,9 +35,61 @@
   margin-right: 5px;
 }
 
-#crime {
-  background-image: url('crime.png');
+.fantasy + label {
+  background-image: asset_url('fantasy.png') !important;
 }
+.thriller + label {
+  background-image: asset_url('thriller.png') !important;
+}
+.crime + label {
+  background-image: asset_url('crime.png') !important;
+}
+.war + label {
+  background-image: asset_url('war.png') !important;
+}
+.action + label {
+  background-image: asset_url('action.png') !important;
+}
+.biography + label {
+  background-image: asset_url('biography.png') !important;
+}
+.adventure + label {
+  background-image: asset_url('adventure.png') !important;
+}
+.history + label {
+  background-image: asset_url('history.png') !important;
+}
+.scifi + label {
+  background-image: asset_url('scifi.png') !important;
+}
+.romance + label {
+  background-image: asset_url('romance.png') !important;
+}
+.western + label {
+  background-image: asset_url('western.png') !important;
+}
+.comedy + label {
+  background-image: asset_url('comedy.png') !important;
+}
+.animation + label {
+  background-image: asset_url('animation.png') !important;
+}
+.family + label {
+  background-image: asset_url('family.png') !important;
+}
+.mystery + label {
+  background-image: asset_url('mystery.png') !important;
+}
+.music + label {
+  background-image: asset_url('music.png') !important;
+}
+.horror + label {
+  background-image: asset_url('horror.png') !important;
+}
+.filmnoir + label {
+  background-image: asset_url('filmnoir.png') !important;
+}
+
 
 .checkbox:checked + label {
   // background-color: #810000;

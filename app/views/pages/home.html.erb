@@ -3,18 +3,20 @@
 </div>
 <div class="banner">
   <div class="banner-container">
-    <h1>Welcome to your movie finding journey </h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut mollitia ducimus saepe repellendus vel! Sed provident ex, saepe perferendis minima similique necessitatibus, soluta adipisci repudiandae, quae sunt facilis omnis mollitia.</p>
+    <h1>Welcome to a stress free evening of food and film!</h1>
+    <p> Start your movie and food finding journey below.</p>
      <% unless user_signed_in? %>
     <button class="sign-up"><a href="/users/sign_up">Sign up</a></button>
+    <% else %>
+    <div class="container"><%= link_to "Begin Journey", survey_path, class: "btn btn-danger " %></div>
     <% end %>
   </div>
 </div>
 
 <div class="mood">
   <div class="mood-text">
-    <h1>Mood that can match the movie your watching</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptate laudantium, voluptatum ex illum laboriosam libero. Neque molestias eligendi minima quam reiciendis cumque, tempore voluptate officiis quos deleniti voluptatibus nostrum.</p>
+    <h1>Find the perfect film for your mood! </h1>
+    <p> With our quick and easy survey we will have all the info we need to find you the perfct film for your night in. </p>
   </div>
 
   <div class="Carousel-images" id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
@@ -42,8 +44,7 @@
 
 
  <div class="food-text">
-    <h1>Food time</h1>
-    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam veritatis quasi, repudiandae enim suscipit quos sunt necessitatibus vel quia quae fugiat nobis </p>
+    <h1>Bring on the Food!</h1>
+    <p> What goes better with a movie than the perfect meal? And with our movie pick comes a stressfree food recommendation.</p>
  </div>
 </div>
-<div class="container"><%= link_to "survey", survey_path, class: "btn btn-danger " %></div>

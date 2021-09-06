@@ -96,12 +96,26 @@
   <br>
   <br>
   <br>
-
+ <div class="container">
+  <%= f.select :diet, ["", "Gluten Free", "Ketogenic", "Vegetarian", "Lacto-Vegetarian", "Ovo-Vegetarian", "Vegan", "Pescetarian", 'Paleo', 'Primal', 'Whole30']%>
+  <%= f.label :diet %>
+  <%= f.select :intolerances, ["",'Dairy', 'Egg', 'Gluten', 'Grain', 'Peanut', 'Seafood', 'Sesame', 'Shellfish', 'Soy', 'Sulfite', 'Tree Nut', 'Wheat']%>
+  <%= f.label :intolerances  %>
+ </div>
+ <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="buttoncontainer">
     <%= button_tag do %>
       <a class="bigredbutton"></a>
+
     <% end %>
+
+
   <% end %>
-  </div>
+</div>
 
 </div>

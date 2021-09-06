@@ -13,6 +13,15 @@ class PairingsController < ApplicationController
   end
 
   def create
+    url2 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet&query=#{params[:pairing][:food]}&number=1"
+    food_url = URI.open(url2).read
+    food_json = JSON.parse(food_url)
+
+    foodtitle = food_json['results'][0]["title"]
+    image = food_json['results'][0]["image"]
+
+    @food = Food.create(dish: foodtitle, image: image)
+
     @food = Food.create(dish: params[:pairing][:food])
     @movie = Movie.find(params[:pairing][:movie_id])
     @pairing = Pairing.new(movie: @movie,food: @food)
@@ -46,14 +55,31 @@ class PairingsController < ApplicationController
     url = "http://www.omdbapi.com/?t=#{@movies.title}&y=#{@movies.year}&apikey=b4c15d98"
     movie_url = URI.open(url).read
     movie_json = JSON.parse(movie_url)
-    @movie_json = JSON.parse(movie_url)
 
     @title = movie_json["Title"]
     @plot = movie_json["Plot"]
     @year = movie_json["Year"]
     @genre = movie_json["Genre"]
     @poster = movie_json["Poster"]
-    @foods = Food.all.sample
+
+    url_2 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&intolerances=#{params[:otp][:intolerances]}&sort=random&number=1"
+    url_3 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&sort=random&number=1"
+    url_4 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&intolerances=#{params[:otp][:intolerances]}&sort=random&number=1"
+    if params[:otp][:diet] != ""
+    food_url = URI.open(url_2).read
+    food_json = JSON.parse(food_url)
+    elsif params[:otp][:intolerances] = '' && params[:otp][:diet] = ""
+    food_url = URI.open(url_3).read
+    food_json = JSON.parse(food_url)
+    else
+    food_url = URI.open(url_4).read
+    food_json = JSON.parse(food_url)
+    end
+
+    foodtitle = food_json['results'][0]["title"]
+    image = food_json['results'][0]["image"]
+
+    @foods = Food.new(dish: foodtitle, image: image)
   end
 
   def random_saying

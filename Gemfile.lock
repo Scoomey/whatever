@@ -184,6 +184,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    select2-rails (4.0.13)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -256,6 +257,7 @@ DEPENDENCIES
   rails-dom-testing
   redis (~> 4.0)
   sass-rails (>= 6)
+  select2-rails
   selenium-webdriver
   simple_form
   spring

@@ -1,0 +1,16 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<% @pairings.each do |pairing|%>
+<div class="container">
+<div class="card bg-danger text-black">
+<%= pairing.movie.title %>
+<br>
+<%= pairing.food.dish %>
+</div>
+</div>
+<% end %>

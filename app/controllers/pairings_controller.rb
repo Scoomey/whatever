@@ -2,7 +2,7 @@ require 'json'
 require 'open-uri'
 
 class PairingsController < ApplicationController
-    before_action :set_pairing, only: [:show, :edit, :update]
+  before_action :set_pairing, only: [:show, :edit, :update, :destroy]
 
   def index
     @pairings = Pairing.all
@@ -13,9 +13,10 @@ class PairingsController < ApplicationController
   end
 
   def create
-    @pairing = Pairing.new(pairing_params)
-    # @pairing.movie =
-    # @pairing.food =
+    @food = Food.create(dish: params[:pairing][:food])
+    @movie = Movie.find(params[:pairing][:movie_id])
+    @pairing = Pairing.new(movie: @movie,food: @food)
+    @pairing.user = current_user
     if @pairing.save
       redirect_to pairing_path(@pairing)
     else

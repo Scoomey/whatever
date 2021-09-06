@@ -5,10 +5,11 @@
   <div class="banner-container">
     <h1>Welcome to a stress free evening of food and film!</h1>
     <p> Start your movie and food finding journey below.</p>
+    <br>
      <% unless user_signed_in? %>
     <button class="sign-up"><a href="/users/sign_up">Sign up</a></button>
     <% else %>
-    <div class="container"><%= link_to "Begin Journey", survey_path, class: "btn btn-danger " %></div>
+    <button class="sign-up"><a> <%= link_to "Begin Journey", survey_path %> </a></button>
     <% end %>
   </div>
 </div>
@@ -19,19 +20,21 @@
     <p> With our quick and easy survey we will have all the info we need to find you the perfct film for your night in. </p>
   </div>
 
-  <div class="Carousel-images" id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-
-      <div class="mood-images" style="background-image: url(<%= image_path 'happy.png' %>)"></div>
-    </div>
-    <div class="carousel-item">
-      <div class="mood-images" style="background-image: url(<%= image_path 'sad.png' %>)"></div>
-    </div>
-    <div class="carousel-item">
-      <div class="mood-images" style="background-image: url(<%= image_path 'angry.png' %>)"></div>
+  <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel" data-interval="1000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="mood-images" style="background-image: url(<%= image_path 'happy.png' %>)"></div>
+      </div>
+      <div class="carousel-item">
+        <div class="mood-images" style="background-image: url(<%= image_path 'sad.png' %>)"></div>
+      </div>
+      <div class="carousel-item">
+        <div class="mood-images" style="background-image: url(<%= image_path 'angry.png' %>)"></div>
+      </div>
     </div>
   </div>
+
+
 
 </div>
 

@@ -1,6 +1,6 @@
 .food_card {
- background-repeat: no-repeat;
-  background-color: rgb(96, 218, 14);
+  background-repeat: no-repeat;
+  background-color: rgb(139, 12, 12);
   display: flex;
   align-items: center;
   padding:5px 0px 5px 0px ;
@@ -9,8 +9,10 @@
   border-radius: 15%;
   border: 5px solid rgba(255, 255, 255, 0.856);
   box-shadow: 0px 0px 15px 2px white;
-  justify-content: center;
+  justify-content: space-between;
   opacity: 0.6;
+  position:relative;
+
 }
 .food_card img {
   border-radius: 16%;
@@ -18,4 +20,6 @@
   box-shadow: 0px 0px 15px 3px black;
   height: 65%;
   width: 80%;
+  position: absolute;
+  bottom: 100px;
 }

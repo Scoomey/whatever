@@ -10,10 +10,8 @@
 <% @pairings.each do |pairing|%>
 <div class="pairings-container">
   <div class="pairings-card">
-    <p> Movie: </p> <%= pairing.movie.title %>
-    <br>
-    <p> Food: </p> <%= pairing.food.dish %>
-    <br>
+    <p> Movie: </p> <p class="name"> <%= pairing.movie.title %> </p>
+    <p> Food: </p> <p class="name"> <%= pairing.food.dish %> </p>
     <button><%= link_to "View Pairing", pairing_path(pairing), class: "view-pairing-btn" %></button>
   </div>
 </div>

@@ -9,7 +9,7 @@
      <% unless user_signed_in? %>
     <button class="sign-up"><a href="/users/sign_up">Sign up</a></button>
     <% else %>
-    <a <%= link_to "Begin Journey", survey_path, class: "btn-lg btn-danger" %>></a>
+    <button class="sign-up"><a> <%= link_to "Begin Journey", survey_path %> </a></button>
     <% end %>
   </div>
 </div>

@@ -62,13 +62,13 @@ class PairingsController < ApplicationController
     @genre = movie_json["Genre"]
     @poster = movie_json["Poster"]
 
-    url_2 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&intolerances=#{params[:otp][:intolerances]}&sort=random&number=1"
-    url_3 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&sort=random&number=1"
+    url_2 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&intolerances=#{params[:otp][:intolerances]}&sort=random&number=1"
+    url_3 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&sort=random&number=1"
     url_4 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&intolerances=#{params[:otp][:intolerances]}&sort=random&number=1"
     if params[:otp][:diet] != ""
     food_url = URI.open(url_2).read
     food_json = JSON.parse(food_url)
-    elsif params[:otp][:intolerances] != '' && params[:otp][:diet] != ""
+    elsif params[:otp][:intolerances] = '' && params[:otp][:diet] = ""
     food_url = URI.open(url_3).read
     food_json = JSON.parse(food_url)
     else

@@ -22,6 +22,8 @@ require 'open-uri'
 #   puts "movie created"
 # end
 
+
+
 url = "https://www.imdb.com/search/title/?count=100&groups=top_1000&sort=user_rating"
 html = Nokogiri::HTML(URI.open(url).read, nil, "utf-8")
 
@@ -36,6 +38,8 @@ html.search(".lister-item-content").each do |element|
   MovieGenre.create(movie: movie, genre: genre)
   end
 end
+
+
 
 # foods = ["Pizza", "Curry", "Succhi", " Ramen", "Full English",
 #          "Mac and Cheese", "Chicken Tikka Masala", "Churros",
@@ -61,3 +65,4 @@ end
 # end
 
 Food.create!(dish: 'Kinder Bueno', image: 'https://tastyk-4ec7.kxcdn.com/wp-content/uploads/2017/07/square.jpg')
+Food.create(dish: 'Snickers', image: 'https://www.addictedtodates.com/wp-content/uploads/2018/05/vegan-snickers-bars-e1618072898213.jpg')

@@ -5,12 +5,16 @@
 <br>
 <br>
 
+<%= link_to "Create a new pairing", new_pairing_path, class: "view-pairing-btn" %>
+
 <% @pairings.each do |pairing|%>
-<div class="container">
-<div class="card bg-danger text-black">
-<%= pairing.movie.title %>
-<br>
-<%= pairing.food.dish %>
-</div>
+<div class="pairings-container">
+  <div class="pairings-card">
+    <p> Movie: </p> <%= pairing.movie.title %>
+    <br>
+    <p> Food: </p> <%= pairing.food.dish %>
+    <br>
+    <button><%= link_to "View Pairing", pairing_path(pairing), class: "view-pairing-btn" %></button>
+  </div>
 </div>
 <% end %>

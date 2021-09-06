@@ -5,6 +5,7 @@
 <br>
 
 <div class="container">
+<h1> Pick a few of the images that match your current movie mood</h1>
   <%= form_for :otp , url:otp_path do |f| %>
   <div class="genres">
     <%= f.check_box :Fantasy, {class: 'checkbox fantasy'}, 'Fantasy', false %>
@@ -45,7 +46,7 @@
     <%= f.label :FilmNoir %>
   </div>
   <div class="slider-container">
-    <h2>Filter movies based on release year </h2>
+    <h1>Filter your movie reccomendation based on release year </h1>
     <div class="multi-range-slider">
       <input type="range" id="minyear" min="1930" max="2021" value="1930" name="otp[minyear]">
       <input type="range" id="maxyear" min="1930" max="2021" value="2021" name="otp[maxyear]">

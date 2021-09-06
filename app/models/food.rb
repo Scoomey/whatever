@@ -1,3 +1,3 @@
 class Food < ApplicationRecord
-  has_many :pairing
+  has_many :pairings, dependent: :destroy
 end

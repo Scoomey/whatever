@@ -25,7 +25,7 @@ gem 'rails-dom-testing'
 gem 'loofah'
 gem 'actiontext'
 gem 'xpath'
-
+gem "select2-rails"
 gem 'webdrivers'
 
 

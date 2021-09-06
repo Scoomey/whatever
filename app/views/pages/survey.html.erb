@@ -51,7 +51,7 @@
 
     <h3 class="survey-header">2. Filter movies based on release year <i class="fas fa-sliders-h" style="margin-top: 20px;margin-bottom: 30px;"></i></h3>
 
-    <div class="multi-range-slider">
+    <div class="multi-range-slider" style="margin-bottom: 100px;">
       <input type="range" id="minyear" min="1930" max="2021" value="1930" name="otp[minyear]">
       <input type="range" id="maxyear" min="1930" max="2021" value="2021" name="otp[maxyear]">
 
@@ -66,6 +66,27 @@
       </div>
       <div class="output2">
         <output id="output2"></output>
+      </div>
+    </div>
+
+    <h3 class="survey-header">3. Filter food based on amount of calories <i class="fas fa-sliders-h" style="margin-top: 20px;margin-bottom: 30px;"></i></h3>
+
+    <div class="calories" style="margin-top: 20px;">
+	    <div class="multi-range-slider">
+      <input type="range" id="mincalories" min="300" max="2000" value="300" name="otp[mincalories]">
+      <input type="range" id="maxcalories" min="300" max="2000" value="2000" name="otp[maxcalories]">
+
+      <div class="calories-slider">
+        <div class="calories-track"></div>
+        <div class="calories-range"></div>
+        <div class="calories-thumb calories-left"></div>
+        <div class="calories-thumb calories-right"></div>
+      </div>
+      <div class="calories1">
+        <output id="calories1"></output>
+      </div>
+      <div class="calories2">
+        <output id="calories2"></output>
       </div>
     </div>
   </div>

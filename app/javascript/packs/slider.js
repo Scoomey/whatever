@@ -83,3 +83,91 @@ function displayValue() {
 }
 
 export { slider, displayValue };
+
+// CALORIES SLIDER
+
+function caloriesSlider() {
+  let mincalories = document.getElementById("mincalories");
+  let maxcalories = document.getElementById("maxcalories");
+
+  let caloriesThumbLeft = document.querySelector(".calories-slider > .calories-thumb.calories-left");
+  let caloriesThumbRight = document.querySelector(".calories-slider > .calories-thumb.calories-right");
+  let caloriesRange = document.querySelector(".calories-slider > .calories-range");
+
+  function setCaloriesLeftValue() {
+    let _this = mincalories,
+      min = parseInt(_this.min),
+      max = parseInt(_this.max);
+
+    _this.value = Math.min(parseInt(_this.value), parseInt(maxcalories.value) - 1);
+
+    let percent = ((_this.value - min) / (max - min)) * 100;
+
+    caloriesThumbLeft.style.left = percent + "%";
+    caloriesRange.style.left = percent + "%";
+  }
+  setCaloriesLeftValue();
+
+  function setCaloriesRightValue() {
+    let _this = maxcalories,
+      min = parseInt(_this.min),
+      max = parseInt(_this.max);
+
+    _this.value = Math.max(parseInt(_this.value), parseInt(mincalories.value) + 1);
+
+    let percent = ((_this.value - min) / (max - min)) * 100;
+
+    caloriesThumbRight.style.right = (100 - percent) + "%";
+    caloriesRange.style.right = (100 - percent) + "%";
+  }
+  setCaloriesRightValue();
+
+  mincalories.addEventListener("input", setCaloriesLeftValue);
+  maxcalories.addEventListener("input", setCaloriesRightValue);
+
+  mincalories.addEventListener("mouseover", function () {
+    thumbLeft.classList.add("hover");
+  });
+  mincalories.addEventListener("mouseout", function () {
+    thumbLeft.classList.remove("hover");
+  });
+  mincalories.addEventListener("mousedown", function () {
+    thumbLeft.classList.add("active");
+  });
+  mincalories.addEventListener("mouseup", function () {
+    thumbLeft.classList.remove("active");
+  });
+
+  maxcalories.addEventListener("mouseover", function () {
+    thumbRight.classList.add("hover");
+  });
+  maxcalories.addEventListener("mouseout", function () {
+    thumbRight.classList.remove("hover");
+  });
+  maxcalories.addEventListener("mousedown", function () {
+    thumbRight.classList.add("active");
+  });
+  maxcalories.addEventListener("mouseup", function () {
+    thumbRight.classList.remove("active");
+  });
+  console.log("slider js connected");
+}
+
+function displayCaloriesValue() {
+  let mincalories = document.getElementById('mincalories'),
+    calories1 = document.getElementById('calories1'),
+    maxcalories = document.getElementById('maxcalories'),
+    calories2 = document.getElementById('calories2');
+
+  calories1.innerHTML = mincalories.value;
+  calories2.innerHTML = maxcalories.value;
+  // use 'change' instead to see the difference in response
+  mincalories.addEventListener('input', function () {
+    calories1.innerHTML = mincalories.value;
+  }, false);
+  maxcalories.addEventListener('input', function () {
+    calories2.innerHTML = maxcalories.value;
+  }, false);
+}
+
+export { caloriesSlider, displayCaloriesValue };

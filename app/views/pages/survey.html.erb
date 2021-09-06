@@ -95,12 +95,14 @@
   <br>
   <br>
   <br>
-  <br>
  <div class="container">
+ <h3 class="survey-header">4. Filter food based on diet and intolerances <i class="fas fa-sort"></i></h3>
+ <br>
+  <span style="font-size: 20px;"> <%= f.label :diet %> </span>
   <%= f.select :diet, ["", "Gluten Free", "Ketogenic", "Vegetarian", "Lacto-Vegetarian", "Ovo-Vegetarian", "Vegan", "Pescetarian", 'Paleo', 'Primal', 'Whole30']%>
-  <%= f.label :diet %>
-  <%= f.select :intolerances, ["",'Dairy', 'Egg', 'Gluten', 'Grain', 'Peanut', 'Seafood', 'Sesame', 'Shellfish', 'Soy', 'Sulfite', 'Tree Nut', 'Wheat']%>
-  <%= f.label :intolerances  %>
+  <br>
+  <span style="font-size: 20px;"> <%= f.label :intolerances  %> </span>
+  <%= f.select :intolerances, ["",'Dairy', 'Egg', 'Gluten', 'Grain', 'Peanut', 'Seafood', 'Sesame', 'Shellfish', 'Soy', 'Sulfite', 'Tree Nut', 'Wheat'] %>
  </div>
  <br>
   <br>

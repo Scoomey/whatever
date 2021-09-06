@@ -169,7 +169,6 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('filmnoir.png') !important;
   transition: ease-in 0.2s;
 }
-
 .checkbox:checked + label {
   color: #f8f7f2;
   border-radius: 10px;
@@ -191,3 +190,12 @@
   text-align: center;
   margin-bottom: 50px;
 }
+.bannerimage {
+    height: 170vh;
+    width: 100%;
+    z-index: -3;
+    position: fixed;
+    top: -420px;
+    background-size: cover;
+    background-image: linear-gradient(rgba(77, 76, 76, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/7-a849840ea4e434e125ec9ee3ad691c53245d98922f2a89197ed43f019167e679.png);
+  }

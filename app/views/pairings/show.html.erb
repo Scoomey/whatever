@@ -8,7 +8,8 @@
   <br>
   <br>
   <br>
-
-  <p><%= @pairing.movie.title %></p>
-  <p><%= @pairing.food.dish %></p>
-  <%= link_to "Back to pairings", pairings_path, class: "view-pairing-btn" %>
+  <div class="container">
+    <p><%= @pairing.movie.title %></p>
+    <p><%= @pairing.food.dish %></p>
+    <%= link_to "Back to pairings", pairings_path, class: "view-pairing-btn" %>
+  </div>

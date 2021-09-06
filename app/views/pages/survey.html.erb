@@ -2,9 +2,11 @@
 <br>
 <br>
 <br>
-<br>
 
 <div class="container">
+  <h1>Welcome to your movie finding journey!</h1>
+  <h3>1. Select your favourite movie genres <i class="fas fa-hand-pointer"></i><br></h3>
+  <h3><i class="fas fa-angle-double-down" style="margin-bottom: 25px;"></i></h3>
   <%= form_for :otp , url:otp_path do |f| %>
   <div class="genres">
     <%= f.check_box :Fantasy, {class: 'checkbox fantasy'}, 'Fantasy', false %>
@@ -45,7 +47,7 @@
     <%= f.label :FilmNoir %>
   </div>
   <div class="slider-container">
-    <h2>Filter movies based on release year </h2>
+    <h3>2. Filter movies based on release year <i class="fas fa-sliders-h" style="margin-top: 20px;margin-bottom: 30px;"></i></h3>
     <div class="multi-range-slider">
       <input type="range" id="minyear" min="1930" max="2021" value="1930" name="otp[minyear]">
       <input type="range" id="maxyear" min="1930" max="2021" value="2021" name="otp[maxyear]">

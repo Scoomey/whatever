@@ -6,20 +6,23 @@
 }
 
 .genres {
-  width: 1400px;
+  width: 1375px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .checkbox {
-  position: absolute;
+  // position: absolute;
   transform: scale(0);
+  display: block;
+  position: relative;
+  overflow: hidden;
 }
 
 .checkbox + label {
-  width: 275px;
-  height: 150px;
+  width: 260px;
+  height: 135px;
   font-size: 0px;
   // background-color: #f8f7f2;
   // color: #810000;
@@ -32,70 +35,143 @@
   border-radius: 10px;
   // font-size: 40px;
   margin-bottom: 20px;
-  margin-right: 5px;
+  // margin-right: 5px;
 }
 
 .fantasy + label {
   background-image: asset_url('fantasy.png') !important;
 }
+.fantasy:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('fantasy.png') !important;
+  transition: ease-in 0.2s;
+}
 .thriller + label {
   background-image: asset_url('thriller.png') !important;
+}
+.thriller:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('thriller.png') !important;
+  transition: ease-in 0.2s;
 }
 .crime + label {
   background-image: asset_url('crime.png') !important;
 }
+.crime:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('crime.png') !important;
+  transition: ease-in 0.2s;
+}
 .war + label {
   background-image: asset_url('war.png') !important;
+}
+.war:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('war.png') !important;
+  transition: ease-in 0.2s;
 }
 .action + label {
   background-image: asset_url('action.png') !important;
 }
+.action:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('action.png') !important;
+  transition: ease-in 0.2s;
+}
 .biography + label {
   background-image: asset_url('biography.png') !important;
+}
+.biography:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('biography.png') !important;
+  transition: ease-in 0.2s;
 }
 .adventure + label {
   background-image: asset_url('adventure.png') !important;
 }
+.adventure:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('adventure.png') !important;
+  transition: ease-in 0.2s;
+}
 .history + label {
   background-image: asset_url('history.png') !important;
+}
+.history:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('history.png') !important;
+  transition: ease-in 0.2s;
 }
 .scifi + label {
   background-image: asset_url('scifi.png') !important;
 }
+.scifi:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('scifi.png') !important;
+  transition: ease-in 0.2s;
+}
 .romance + label {
   background-image: asset_url('romance.png') !important;
+}
+.romance:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('romance.png') !important;
+  transition: ease-in 0.2s;
 }
 .western + label {
   background-image: asset_url('western.png') !important;
 }
+.western:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('western.png') !important;
+  transition: ease-in 0.2s;
+}
 .comedy + label {
   background-image: asset_url('comedy.png') !important;
+}
+.comedy:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('comedy.png') !important;
+  transition: ease-in 0.2s;
 }
 .animation + label {
   background-image: asset_url('animation.png') !important;
 }
+.animation:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('animation.png') !important;
+  transition: ease-in 0.2s;
+}
 .family + label {
   background-image: asset_url('family.png') !important;
+}
+.family:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('family.png') !important;
+  transition: ease-in 0.2s;
 }
 .mystery + label {
   background-image: asset_url('mystery.png') !important;
 }
+.mystery:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('mystery.png') !important;
+  transition: ease-in 0.2s;
+}
 .music + label {
   background-image: asset_url('music.png') !important;
+}
+.music:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('music.png') !important;
+  transition: ease-in 0.2s;
 }
 .horror + label {
   background-image: asset_url('horror.png') !important;
 }
+.horror:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('horror.png') !important;
+  transition: ease-in 0.2s;
+}
 .filmnoir + label {
   background-image: asset_url('filmnoir.png') !important;
+}
+.filmnoir:checked + label {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('filmnoir.png') !important;
+  transition: ease-in 0.2s;
 }
 
 
 .checkbox:checked + label {
-  // background-color: #810000;
-  // color: #f8f7f2;
-  // border-radius: 10px;
-  // text-align: center;
+  color: #f8f7f2;
+  border-radius: 10px;
+  padding-top: 40px;
+  text-align: center;
+  font-size: 40px;
   transform: scale(95%);
   border: 3px solid #810000;
 }

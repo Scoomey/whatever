@@ -1,25 +1,29 @@
 .food_card {
   background-repeat: no-repeat;
-  background-color: rgb(139, 12, 12);
+  // background-color: rgb(139, 12, 12);
   display: flex;
   align-items: center;
-  padding:5px 0px 5px 0px ;
+   padding:20px 35px 20px 35px;
   flex-direction: column;
   width: 30rem;
   border-radius: 15%;
-  border: 5px solid rgba(255, 255, 255, 0.856);
+  // border: 5px solid rgba(255, 255, 255, 0.856);
   box-shadow: 0px 0px 15px 2px white;
   justify-content: space-between;
   opacity: 0.6;
   position:relative;
+  min-height: 80vh;
 
+}
+h2 {
+  color: rgb(209, 16, 16);
 }
 .food_card img {
   border-radius: 16%;
   border: 5px solid black;
   box-shadow: 0px 0px 15px 3px black;
   height: 65%;
-  width: 80%;
+  width: 70%;
   position: absolute;
   bottom: 100px;
 }

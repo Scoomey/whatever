@@ -5,10 +5,11 @@
   <div class="banner-container">
     <h1>Welcome to a stress free evening of food and film!</h1>
     <p> Start your movie and food finding journey below.</p>
+    <br>
      <% unless user_signed_in? %>
     <button class="sign-up"><a href="/users/sign_up">Sign up</a></button>
     <% else %>
-    <div class="container"><%= link_to "Begin Journey", survey_path, class: "btn btn-danger " %></div>
+    <a <%= link_to "Begin Journey", survey_path, class: "btn-lg btn-danger" %>></a>
     <% end %>
   </div>
 </div>

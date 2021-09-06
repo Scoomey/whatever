@@ -1,9 +1,18 @@
-
 .survey-container {
   margin: 0 auto;
   margin-left: 20px;
   margin-right: 20px;
 }
+
+h1 {
+  margin-bottom: 20px;
+  color: $lighter-red;
+}
+
+h3 {
+    font-size: 25px;
+    color: $white;
+  }
 
 .genres {
   width: 1375px;
@@ -24,10 +33,9 @@
   width: 260px;
   height: 135px;
   font-size: 0px;
-  // background-color: #f8f7f2;
+  background-color: #f8f7f2;
   // color: #810000;
   cursor:pointer;
-  background-image: url('crime.png');
   background-repeat: no-repeat;
   background-size: cover;
   // text-align: center;
@@ -181,11 +189,6 @@
   margin: 0 auto;
   margin-top: 40px;
   text-align: center;
-  h2 {
-    margin-bottom: 40px;
-    font-size: 30px;
-    color: $white;
-  }
 }
 
 .submit-btn {

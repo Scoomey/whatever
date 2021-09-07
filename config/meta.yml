@@ -1,0 +1,5 @@
+meta_product_name: "Whatever.watch"
+meta_title: "Whatever - Welcome to a stress free evening of food and film!"
+meta_description: "Escape the evening's entertainment indecision, with our easy to use movie and food pairing tool"
+meta_image: "movies.png" # should exist in `app/assets/images/`
+twitter_account: "@watch_whatever"   # required for Twitter Cards

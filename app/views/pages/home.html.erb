@@ -1,15 +1,15 @@
 <div class="scroll-btn">
-<a href="#home"><i class="fas fa-arrow-up"></i></a>
+  <a href="#home"><i class="fas fa-arrow-up"></i></a>
 </div>
 <div class="banner">
   <div class="banner-container">
     <h1>Welcome to a stress free evening of food and film!</h1>
-    <p> Start your movie and food finding journey below.</p>
+    <p class="tagline"> Start your movie and food finding journey below.</p>
     <br>
      <% unless user_signed_in? %>
     <button class="sign-up"><a href="/users/sign_up">Sign up</a></button>
     <% else %>
-    <button class="sign-up"><a> <%= link_to "Begin Journey", survey_path %> </a></button>
+    <button class="begin"><a> <%= link_to "Begin Journey", survey_path %> </a></button>
     <% end %>
   </div>
 </div>
@@ -17,7 +17,7 @@
 <div class="mood">
   <div class="mood-text">
     <h1>Find the perfect film for your mood! </h1>
-    <p> With our quick and easy survey we will have all the info we need to find you the perfct film for your night in. </p>
+    <p class="description"> With our quick and easy survey we'll find you the perfect film for your night in. Simply input your favourite genres then filter movies by release year if desired- we'll make sure to create a perfect match every time.</p>
   </div>
 
   <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel" data-interval="1000">
@@ -33,21 +33,19 @@
       </div>
     </div>
   </div>
-
-
-
-</div>
-
 </div>
 
 
 <div class="food">
-
   <div class="food-images" style="background-image: url(<%= image_path 'food.png' %>)"></div>
+    <div class="food-text">
+      <h1>Bring on the Food!</h1>
+      <p> What goes better with a movie than the perfect meal? Our movie choice also comes with a stress-free food recommendation, filtered according to your preferences for a great pairing with every movie.</p>
+    </div>
+  </div>
+</div>
 
-
- <div class="food-text">
-    <h1>Bring on the Food!</h1>
-    <p> What goes better with a movie than the perfect meal? And with our movie pick comes a stressfree food recommendation.</p>
- </div>
+<div class="footer">
+  <p><a href="https://twitter.com/watch_whatever"><i class="fab fa-twitter-square"></i></a></p>
+  <p><span class="smaller">© 2021 Whatever, Inc.</span></p>
 </div>

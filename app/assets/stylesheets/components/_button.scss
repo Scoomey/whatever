@@ -1,3 +1,5 @@
+// SIGN-UP BUTTON
+
 .sign-up {
   background-color: #810000;
   border: none;
@@ -34,6 +36,9 @@
 .sign-up:hover:after {
   width: 100%;
 }
+
+// BACK-TO-TOP BUTTON
+
 .scroll-btn i{
   position: fixed;
   bottom: 20px;
@@ -48,4 +53,44 @@
 
 .btn-lg{
   border: 3px solid black;
+}
+
+// LOGGED IN BUTTON
+
+.begin {
+  background-color: #810000;
+  border: none;
+  border-radius: 5px;
+  color: #f8f7f2;
+  outline: none;
+  padding: 15px 30px 15px;
+  position: relative;
+  margin-top: -12px;
+  a {
+    color: #f8f7f2;
+    text-decoration: none;
+  }
+}
+.begin:before,
+.begin:after {
+  border: 0 solid transparent;
+  transition: all 0.3s;
+  content: '';
+  height: 0;
+  position: absolute;
+  width: 24px;
+}
+.begin:before {
+  border-top: 3px solid #f8f7f2;
+  right: 0;
+  top: -4px;
+}
+.begin:after {
+  border-bottom: 3px solid #f8f7f2;
+  bottom: -4px;
+  left: 0;
+}
+.begin:hover:before,
+.begin:hover:after {
+  width: 100%;
 }

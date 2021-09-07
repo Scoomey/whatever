@@ -21,7 +21,18 @@
   flex-grow: 0;
 }
 .navbar-lewagon .navbar-brand img {
-  width: 30%;
-  margin-left: -10px;
+  width: 100%;
+  align-items: center;
   margin-top: 5px;
+  transition: all .2s ease-in-out;
+}
+
+.navbar-brand {
+  width: 150px;
+  height: 75px;
+  margin-top: -50px;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
 }

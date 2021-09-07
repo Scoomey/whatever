@@ -60,30 +60,38 @@ class PairingsController < ApplicationController
     @genre = movie_json["Genre"]
     @poster = movie_json["Poster"]
 
-    url_2 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&intolerances=#{params[:otp][:intolerances]}&sort=random&number=1"
-    url_3 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&sort=random&number=1"
-    url_4 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&intolerances=#{params[:otp][:intolerances]}&sort=random&number=1"
-    if params[:otp][:diet] != ""
-    food_url = URI.open(url_2).read
-    food_json = JSON.parse(food_url)
-    elsif params[:otp][:intolerances] = '' && params[:otp][:diet] = ""
-    food_url = URI.open(url_3).read
-    food_json = JSON.parse(food_url)
+    url_2 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&intolerances=#{params[:otp][:intolerances]}&type=mainCourse&sort=random&number=1"
+    url_3 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&type=mainCourse&sort=random&number=1"
+    url_4 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&intolerances=#{params[:otp][:intolerances]}&type=mainCourse&sort=random&number=1"
+    url_5 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&type=mainCourse&sort=random&number=1"
+    if params[:otp][:intolerances] == '' && params[:otp][:diet] != ""
+      food_url = URI.open(url_4).read
+      food_json = JSON.parse(food_url)
+    elsif params[:otp][:intolerances] == '' && params[:otp][:diet] == ""
+      food_url = URI.open(url_2).read
+      food_json = JSON.parse(food_url)
+    elsif params[:otp][:diet] != ""
+      food_url = URI.open(url_3).read
+      food_json = JSON.parse(food_url)
     else
-    food_url = URI.open(url_4).read
-    food_json = JSON.parse(food_url)
+      food_url = URI.open(url_5).read
+      food_json = JSON.parse(food_url)
     end
 
     foodtitle = food_json['results'][0]["title"]
     image = food_json['results'][0]["image"]
+    @foodid = food_json['results'][0]["id"]
 
     @foods = Food.new(dish: foodtitle, image: image)
+
+    sayings = ["#{@title}, with #{foodtitle}, A Match made in heaven 😍", "Woah! #{@title}, and #{foodtitle}, who'd of thought?! 🧐", "#{@title}, and #{foodtitle} FTW 👻", "#{@title}, and #{@dish}, can't argue with that?"]
+    @saying = sayings.sample
   end
 
-  def random_saying
-    sayings = ["#{@title}, with #{@dish}, A Match made in heaven 😍", "Woah! #{@title}, and #{@dish}, who'd of thought?! 🧐", "#{@title}, and #{@dish} 4TW 👻", "#{@title}, and #{@dish}, can't argue with that?"]
-    sayings.sample
-  end
+  # def random_saying
+  #   sayings = ["#{@title}, with #{@dish}, A Match made in heaven 😍", "Woah! #{@title}, and #{@dish}, who'd of thought?! 🧐", "#{@title}, and #{@dish} FTW 👻", "#{@title}, and #{@dish}, can't argue with that?"]
+  #   @saying = sayings.sample
+  # end
   private
 
   def set_pairing

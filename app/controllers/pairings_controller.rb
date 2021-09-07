@@ -65,16 +65,16 @@ class PairingsController < ApplicationController
     url_4 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&intolerances=#{params[:otp][:intolerances]}&type=mainCourse&sort=random&number=1"
     url_5 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&type=mainCourse&sort=random&number=1"
     if params[:otp][:intolerances] == '' && params[:otp][:diet] != ""
-      food_url = URI.open(url_4).read
+      food_url = URI.open(url_5).read
       food_json = JSON.parse(food_url)
     elsif params[:otp][:intolerances] == '' && params[:otp][:diet] == ""
-      food_url = URI.open(url_2).read
-      food_json = JSON.parse(food_url)
-    elsif params[:otp][:diet] != ""
       food_url = URI.open(url_3).read
       food_json = JSON.parse(food_url)
+    elsif params[:otp][:diet] != "" && params[:otp][:intolerances] != ''
+      food_url = URI.open(url_2).read
+      food_json = JSON.parse(food_url)
     else
-      food_url = URI.open(url_5).read
+      food_url = URI.open(url_4).read
       food_json = JSON.parse(food_url)
     end
 

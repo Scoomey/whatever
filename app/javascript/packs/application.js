@@ -29,6 +29,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { slider, displayValue, caloriesSlider, displayCaloriesValue } from "./slider";
 import { initSelect2 } from '../components/init_select2';
+import { initChatroomCable } from '../channel/initChatroomCable';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -37,6 +38,7 @@ document.addEventListener('turbolinks:load', () => {
   displayValue();
   caloriesSlider();
   displayCaloriesValue();
+  initChatroomCable();
 });
 
 

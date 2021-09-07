@@ -1,5 +1,9 @@
+  <% result = @foods.dish.gsub(" ", "-")%>
+
+
   <div class="food_card">
     <h2><%= @foods.dish %></h2>
-    <img src=<%="#{@foods.image}"%> alt="movie poster">
-    <%# <h2><%= @food.description %>
+    <%= link_to "https://spoonacular.com/recipes/#{result}-#{@foodid}" do %>
+      <img src=<%="#{@foods.image}"%> alt="movie poster">
+    <% end %>
   </div>

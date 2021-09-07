@@ -88,10 +88,6 @@ class PairingsController < ApplicationController
     @saying = sayings.sample
   end
 
-  # def random_saying
-  #   sayings = ["#{@title}, with #{@dish}, A Match made in heaven 😍", "Woah! #{@title}, and #{@dish}, who'd of thought?! 🧐", "#{@title}, and #{@dish} FTW 👻", "#{@title}, and #{@dish}, can't argue with that?"]
-  #   @saying = sayings.sample
-  # end
   private
 
   def set_pairing

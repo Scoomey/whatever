@@ -60,10 +60,10 @@ class PairingsController < ApplicationController
     @genre = movie_json["Genre"]
     @poster = movie_json["Poster"]
 
-    url_2 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&intolerances=#{params[:otp][:intolerances]}&type=mainCourse&sort=random&number=1"
-    url_3 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&type=mainCourse&sort=random&number=1"
-    url_4 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&intolerances=#{params[:otp][:intolerances]}&type=mainCourse&sort=random&number=1"
-    url_5 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&type=mainCourse&sort=random&number=1"
+    url_2 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=fa11ae9f2b3e49448a8060b40a854d5e&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&intolerances=#{params[:otp][:intolerances]}&type=mainCourse&sort=random&number=1"
+    url_3 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=fa11ae9f2b3e49448a8060b40a854d5e&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&type=mainCourse&sort=random&number=1"
+    url_4 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=fa11ae9f2b3e49448a8060b40a854d5e&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&intolerances=#{params[:otp][:intolerances]}&type=mainCourse&sort=random&number=1"
+    url_5 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=fa11ae9f2b3e49448a8060b40a854d5e&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&type=mainCourse&sort=random&number=1"
     if params[:otp][:intolerances] == '' && params[:otp][:diet] != ""
       food_url = URI.open(url_4).read
       food_json = JSON.parse(food_url)
@@ -84,7 +84,7 @@ class PairingsController < ApplicationController
 
     @foods = Food.new(dish: foodtitle, image: image)
 
-    sayings = ["#{@title}, with #{foodtitle}, A Match made in heaven 😍", "Woah! #{@title}, and #{foodtitle}, who'd of thought?! 🧐", "#{@title}, and #{foodtitle} FTW 👻", "#{@title}, and #{@dish}, can't argue with that?"]
+    sayings = ["#{@title} with #{foodtitle}, a match made in heaven 😍", "Woah! #{@title} and #{foodtitle}, who'd have thought?! 🧐", "#{@title} and #{foodtitle} FTW 👻", "#{@title} and #{@dish}, can't argue with that?!"]
     @saying = sayings.sample
   end
 

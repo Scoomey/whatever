@@ -4,6 +4,6 @@
   <div class="food_card">
     <h2><%= @foods.dish %></h2>
     <%= link_to "https://spoonacular.com/recipes/#{result}-#{@foodid}" do %>
-      <img src=<%="#{@foods.image}"%> alt="movie poster">
+      <img src=<%="#{@foods.image}"%> alt="movie poster" class="food-image">
     <% end %>
   </div>

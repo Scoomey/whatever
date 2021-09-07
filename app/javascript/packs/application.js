@@ -38,8 +38,3 @@ document.addEventListener('turbolinks:load', () => {
   caloriesSlider();
   displayCaloriesValue();
 });
-
-
-document.addEventListener("turbolinks:load", function () {
-  initSelect2();
-});

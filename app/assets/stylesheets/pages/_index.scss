@@ -1,40 +1,4 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "new";
-
-.pairings-container {
-  text-align: center;
-  margin: 0 auto;
-  width: 1450px;
-  display: flex;
-  justify-content: center;
-  display: flex;
-}
-
-.pairings-card {
-  background-color: $darker-red;
-  width: 350px;
-  height: 175px;
-  text-align: center;
-  padding:10px 15px 10px 15px;
-  margin: 10px 10px;
-  color: $white;
-  p {
-    color: #a9aaa5;
-    font-weight: 700;
-  }
-  border-radius: 10px;
-  margin-bottom: 20px;
-  .name {
-    font-size: 15px;
-    color: $white;
-  }
-}
-
-.view-pairing-btn {
-  background-color: $lighter-red;
-  color: #f8f7f2;
-  a {
-    text-decoration-style: none;
-  }
-}
+@import "pairings"

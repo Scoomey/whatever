@@ -1,4 +1,5 @@
 .food_card {
+
   // background-repeat: no-repeat;
   background-color: #1b1717;
   // display: flex;
@@ -7,9 +8,12 @@
   flex-direction: column;
   width: 375px;
   transform: scale(1.3);
+
   border-radius: 15%;
+  border: 3px solid #f8f7f2;
   // border: 5px solid rgba(255, 255, 255, 0.856);
   // box-shadow: 0px 0px 15px 2px white;
+
   border: 3px solid #f8f7f2;
   // justify-content: space-between;
   // opacity: 0.6;
@@ -21,12 +25,14 @@
     color: #810000;
     font-size: 20px;
   }
+
 }
 // h2 {
 //   color: rgb(209, 16, 16);
 // }
 .food_card img {
   border-radius: 15px;
+
   border: 5px solid black;
   box-shadow: 0px 0px 15px 3px black;
   width: 240px;

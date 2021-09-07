@@ -4,15 +4,18 @@
 <br>
 <br>
 <br>
-
-<%= link_to "Create a new pairing", new_pairing_path, class: "view-pairing-btn" %>
-
-<% @pairings.each do |pairing|%>
-<div class="pairings-container">
-  <div class="pairings-card">
-    <p> Movie: </p> <p class="name"> <%= pairing.movie.title %> </p>
-    <p> Food: </p> <p class="name"> <%= pairing.food.dish %> </p>
-    <button><%= link_to "View Pairing", pairing_path(pairing), class: "view-pairing-btn" %></button>
+<div class="pairingbannerimage"></div>
+<div class="pairing-daddy-container">
+  <div>
+    <%= link_to "Create a new pairing", new_pairing_path, class: "sign-up new-pairing-button" %>
+  </div>
+  <div class="pairings-container">
+  <% @pairings.each do |pairing|%>
+    <div class="pairings-card">
+      <p class="name"> <%= pairing.movie.title %> </p>
+      <p class="name"> <%= pairing.food.dish %> </p>
+      <button><%= link_to "View Pairing", pairing_path(pairing), class: "sign-up" %></button>
+    </div>
+    <% end %>
   </div>
 </div>
-<% end %>

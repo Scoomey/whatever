@@ -8,11 +8,11 @@
   <%= render 'shared/moviecard' %>
   <div style="zindex: 3; align-self: center;">
 
-    <%= image_tag 'movie-food-connecter.png' %>
+    <%= image_tag 'movie-food-connectersrgb2.png' %>
 
-    <p><%=@saying%></p>
+    <p class="saying" style="margin: 0 auto;"><%=@saying%></p>
 
   </div>
   <%= render 'shared/foodcard' %>
 </div>
-    <div class="container"><%= link_to "Back to quizz", survey_path, class: "btn btn-danger " %></div>
+    <div class="container"><%= link_to "Back to quiz", survey_path, class: "btn btn-danger " %></div>

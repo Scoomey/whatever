@@ -4,6 +4,11 @@ Rails.application.routes.draw do
 
   resources :movies
 
+  resources :chatrooms, only: :show do
+    resources :messages, only: [ :create, :new ]
+  end
+
+
   resources :foods, only: :show
 
   resources :pairings, except: :destroy

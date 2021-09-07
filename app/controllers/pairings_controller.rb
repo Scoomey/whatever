@@ -65,16 +65,16 @@ class PairingsController < ApplicationController
     url_4 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=fa11ae9f2b3e49448a8060b40a854d5e&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&intolerances=#{params[:otp][:intolerances]}&type=mainCourse&sort=random&number=1"
     url_5 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=fa11ae9f2b3e49448a8060b40a854d5e&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:minCalories]}&maxCalories=#{params[:otp][:maxCalories]}&type=mainCourse&sort=random&number=1"
     if params[:otp][:intolerances] == '' && params[:otp][:diet] != ""
-      food_url = URI.open(url_4).read
+      food_url = URI.open(url_5).read
       food_json = JSON.parse(food_url)
     elsif params[:otp][:intolerances] == '' && params[:otp][:diet] == ""
-      food_url = URI.open(url_2).read
-      food_json = JSON.parse(food_url)
-    elsif params[:otp][:diet] != ""
       food_url = URI.open(url_3).read
       food_json = JSON.parse(food_url)
+    elsif params[:otp][:diet] != "" && params[:otp][:intolerances] != ''
+      food_url = URI.open(url_2).read
+      food_json = JSON.parse(food_url)
     else
-      food_url = URI.open(url_5).read
+      food_url = URI.open(url_4).read
       food_json = JSON.parse(food_url)
     end
 
@@ -88,10 +88,6 @@ class PairingsController < ApplicationController
     @saying = sayings.sample
   end
 
-  # def random_saying
-  #   sayings = ["#{@title}, with #{@dish}, A Match made in heaven 😍", "Woah! #{@title}, and #{@dish}, who'd of thought?! 🧐", "#{@title}, and #{@dish} FTW 👻", "#{@title}, and #{@dish}, can't argue with that?"]
-  #   @saying = sayings.sample
-  # end
   private
 
   def set_pairing

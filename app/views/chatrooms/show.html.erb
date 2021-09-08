@@ -1,19 +1,32 @@
-<div class="container">
-<h1>#<%= @chatroom.name %></h1>
-<div id="messages" data-chatroom-id="<%= @chatroom.id %>">
-  <% @chatroom.messages.each do |message| %>
-    <div class="message-container" id="message-<%= message.id %>">
-      <i class="author">
-        <span><%= message.user.nickname %></span>
-        <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-      </i>
-      <p><%= message.content %></p>
+
+<div class="">
+<br>
+<br>
+<br>
+
+  <h1>#<%= @chatroom.name %></h1>
+
+  <div class="d-flex">
+  <div class="plex">
+    <iframe src="http://127.0.0.1:32400/web/index.html#!/server/ca33fa646bf46c9b4df20fb142df43327c5463d0/details?key=%2Flibrary%2Fmetadata%2F48105" title="Luca" width="1200" height="700" style="border:1px solid black;"></iframe>
     </div>
-  <% end %>
-</div>
 
+    <div id="messages" data-chatroom-id="<%= @chatroom.id %>">
+      <div class="messages">
 
-<%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
-  <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}" %>
-<% end %>
+          <% @chatroom.messages.each do |message| %>
+            <div class="message-container" id="message-<%= message.id %>">
+
+                <p> <font style="color:#810000;"><%= message.user.nickname%></font> : <%= message.content %></p>
+                                <%# <small> <%= message.created_at.strftime("%l:%M%p") %>
+
+            </div>
+          <% end %>
+        </div>
+          <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+            <%= f.input :content, label: false, placeholder: "Message ##{@chatroom.name}", class: "chat-input"%>
+          <% end %>
+      </div>
+  </div>
+
 </div>

@@ -1,0 +1,41 @@
+#messages {
+  max-height: 80vh;
+  font-size: 14px;
+}
+
+
+.messages {
+  height: 80vh;
+  overflow: scroll;
+  color: whitesmoke;
+  border-top: 1px solid rgb(116, 113, 113);
+  border-left: 1px solid rgb(116, 113, 113);
+
+}
+
+.plex {
+  border-top: 2px solid rgb(116, 113, 113);
+
+}
+
+
+.message-container {
+  overflow: scroll;
+  position: relative;
+  max-width: 270px;
+  width: 270px;
+  word-wrap: break-word;
+  margin: 2px;
+  color:whitesmoke;
+}
+
+.chat-input {
+  position: absolute;
+  bottom: 0;
+}
+
+
+.message-container  p {
+ color: white;
+ text-align: left;
+}

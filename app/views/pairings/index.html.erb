@@ -4,7 +4,6 @@
 <br>
 <br>
 <br>
-<div class="pairingbannerimage"></div>
 <div class="pairing-daddy-container">
   <div>
     <%= link_to "Create a new pairing", new_pairing_path, class: "sign-up new-pairing-button" %>
@@ -14,7 +13,7 @@
     <div class="pairings-card">
       <p class="name"> <%= pairing.movie.title %> </p>
       <p class="name"> <%= pairing.food.dish %> </p>
-      <button><%= link_to "View Pairing", pairing_path(pairing), class: "sign-up" %></button>
+      <button class="button"><%= link_to "View Pairing", pairing_path(pairing), class: "sign-up" %></button>
     </div>
     <% end %>
   </div>

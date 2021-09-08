@@ -31,7 +31,12 @@ class PairingsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @movies = @pairing.movie
+    @foods = @pairing.food
+
+    movie_info
+  end
 
   def edit; end
 
@@ -50,15 +55,7 @@ class PairingsController < ApplicationController
     @movies = @movies.select { |movie| movie.year >= params[:otp][:minyear].to_i && movie.year <= params[:otp][:maxyear].to_i }
     @movies = @movies.sample
 
-    url = "http://www.omdbapi.com/?t=#{@movies.title}&y=#{@movies.year}&apikey=b4c15d98"
-    movie_url = URI.open(url).read
-    movie_json = JSON.parse(movie_url)
-
-    @title = movie_json["Title"]
-    @plot = movie_json["Plot"]
-    @year = movie_json["Year"]
-    @genre = movie_json["Genre"]
-    @poster = movie_json["Poster"]
+    movie_info
 
     url_2 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&intolerances=#{params[:otp][:intolerances]}&type=mainCourse&sort=random&number=1"
     url_3 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet=#{params[:otp][:diet]}&minCalories=#{params[:otp][:mincalories]}&maxCalories=#{params[:otp][:maxcalories]}&type=mainCourse&sort=random&number=1"
@@ -96,5 +93,17 @@ class PairingsController < ApplicationController
 
   def pairing_params
     params.require(:pairing).permit(:movie, :food)
+  end
+
+  def movie_info
+    url = "http://www.omdbapi.com/?t=#{@movies.title}&y=#{@movies.year}&apikey=b4c15d98"
+    movie_url = URI.open(url).read
+    movie_json = JSON.parse(movie_url)
+
+    @title = movie_json["Title"]
+    @plot = movie_json["Plot"]
+    @year = movie_json["Year"]
+    @genre = movie_json["Genre"]
+    @poster = movie_json["Poster"]
   end
 end

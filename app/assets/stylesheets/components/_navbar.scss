@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100px;
   z-index: 5;
-  margin-top: -25px;
+  margin-top: 0px;
   a{
     color: $white !important;
   }
@@ -17,6 +17,7 @@
   a {
     color: $black !important;
   }
+  margin-left: 20px;
 }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -26,6 +27,7 @@
   align-items: center;
   margin-top: 5px;
   transition: all .2s ease-in-out;
+  margin-top: -10px;
 }
 
 .navbar-brand {

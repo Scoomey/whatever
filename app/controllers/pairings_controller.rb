@@ -84,7 +84,7 @@ class PairingsController < ApplicationController
 
     @foods = Food.new(dish: foodtitle, image: image)
 
-    sayings = ["#{@title} with #{foodtitle}, a match made in heaven 😍", "Woah! #{@title} and #{foodtitle}, who'd have thought?! 🧐", "#{@title} and #{foodtitle} FTW 👻", "#{@title} and #{@dish}, can't argue with that?!"]
+    sayings = ["#{@title} with #{foodtitle}, a match made in heaven 😍", "Woah! #{@title} and #{foodtitle}, who'd have thought?! 🧐", "#{@title} and #{foodtitle} FTW 👻", "#{@title} and #{foodtitle}, can't argue with that?!"]
     @saying = sayings.sample
   end
 

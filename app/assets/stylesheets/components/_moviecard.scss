@@ -1,43 +1,104 @@
- .movie_card {
-  background-repeat: no-repeat;
-  // background-color: rgb(139, 12, 12);
-  display: flex;
-  align-items: center;
+ .movie-card {
+  // background-repeat: no-repeat;
+  background-color: #1b1717;
+  // display: flex;
+  // align-items: center;
   padding:20px 35px 20px 35px;
   flex-direction: column;
-  width: 34rem;
+  width: 375px;
+  transform: scale(1.3);
   border-radius: 15%;
-  border: 3px solid #f8f7f2;;
+
+  // border: 5px solid rgba(255, 255, 255, 0.856);
   // box-shadow: 0px 0px 15px 2px white;
-  // opacity: 0.6;
-  min-height: 60vh;
-  margin-left: 50px;
+  border: 3px solid #f8f7f2;
+  height: 400px;
+  // min-height: 80vh;
+  margin-left: 150px;
+
+  h2 {
+    color: #810000;
+    font-size: 20px;
+  }
 }
 h2 {
   margin: 0px 0px 0px 0px;
-  color: rgb(209, 16, 16);
+  // color: rgb(209, 16, 16);
   text-align: center;
 }
 .movie-card p {
   margin: 20px 0px 10px 0px;
   padding: 20px 15px ;
   shape-outside: circle(25%);
-  color: rgb(209, 16, 16);
-
-
-}
-a .movie_card img {
-  border-radius: 15px;
-  border: 3px solid #f8f7f2;;
-  // box-shadow: 0px 0px 15px 3px black;
-  height: 70%;
-  width: 70%;
-  padding: 10px;
+  color: #d0d2c6;
+  font-size: 15px;
 
 }
-.movie_card img {
-  border-radius: 15px;
-  // box-shadow: 0px 0px 15px 3px black;
-  margin: 15px 0px;
 
+// a .movie_card img {
+//   border-radius: 16%;
+//   border: 5px solid black;
+//   box-shadow: 0px 0px 15px 3px black;
+//   height: 70%;
+//   width: 70%;
+//   padding: 10px;
+
+// }
+// .movie_card img {
+//   border-radius: 16%;
+//   box-shadow: 0px 0px 15px 3px black;
+//   margin: 15px 0px;
+
+// }
+
+// Thanks to https://3dtransforms.desandro.com/card-flip
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   background: black;
+// }
+
+.scene {
+  // width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  // perspective: 800px;
+
+  .movie_card {
+    position: relative;
+    width: 350px;
+    // min-height: 80vh;
+    color: white;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    transform-style: preserve-3d;
+    margin-left: 25px;
+    margin-top: 25px;
+    &:hover {
+      transform: rotateY(0.5turn);
+    }
+
+    .card__face {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transition: 1s ease-in-out;
+
+      img {
+        width: 240px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      &--back {
+        transform: rotateY(0.5turn);
+      }
+    }
+  }
 }

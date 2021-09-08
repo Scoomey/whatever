@@ -4,13 +4,13 @@
     <div class="food_card">
       <div class="card__face card__face--back">
         <div class="food-card-back">
-          <%= link_to "https://spoonacular.com/recipes/#{result}-#{@foodid}" do %>
+          <%= link_to "https://spoonacular.com/recipes/#{result}-#{@foodid}", target: "_blank" do %>
             <h2><%= @foods.dish %></h2>
           <% end %>
         </div>
       </div>
       <div class="card__face card__face--front">
-        <%= link_to "https://spoonacular.com/recipes/#{result}-#{@foodid}" do %>
+        <%= link_to "https://spoonacular.com/recipes/#{result}-#{@foodid}", target: "_blank" do %>
           <img src=<%="#{@foods.image}"%> alt="movie poster" class="food-image">
         <% end %>
       </div>

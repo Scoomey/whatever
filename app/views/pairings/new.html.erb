@@ -14,7 +14,9 @@
   <%= simple_form_for @pairing do |f| %>
     <%= f.association :movie, input_html: { class: 'select2' } %>
     <%= f.input :food %>
-    <%= f.button :submit %>
+    <%= f.button :button, type: :submit, class: 'sign-up' do %>
+      <span>Create pairing</span>
+    <% end %>
   <% end %>
   </div>
 

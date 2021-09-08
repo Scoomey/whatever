@@ -3,7 +3,7 @@
 
   <div class="food_card">
     <h2><%= @foods.dish %></h2>
-    <%= link_to "https://spoonacular.com/recipes/#{result}-#{@foodid}" do %>
+    <%= link_to "https://spoonacular.com/recipes/#{result}-#{@foodid}", target: "_blank" do %>
       <img src=<%="#{@foods.image}"%> alt="movie poster" class="food-image">
     <% end %>
   </div>

@@ -29,19 +29,15 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { slider, displayValue, caloriesSlider, displayCaloriesValue } from "./slider";
 import { initSelect2 } from '../components/init_select2';
-import { initChatroomCable } from '../channel/initChatroomCable';
+import { initChatroomCable } from '../channels/chatroom_channel';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initChatroomCable();
   slider();
   displayValue();
   caloriesSlider();
   displayCaloriesValue();
-  initChatroomCable();
-});
-
-
-document.addEventListener("turbolinks:load", function () {
   initSelect2();
 });

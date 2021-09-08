@@ -4,12 +4,18 @@
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="container">
-    <p><%= @pairing.movie.title %></p>
-    <p><%= @pairing.food.dish %></p>
-    <%= link_to "Back to pairings", pairings_path, class: "view-pairing-btn" %>
+
+
+  <div class="pairings_container" style="display: flex; justify-content: center; margin-top: 50px;">
+  <%= render 'shared/moviecard' %>
+  <div style="zindex: 3; align-self: center;">
+
+    <%= image_tag 'movie-food-connectersrgb2.png' %>
+
+
   </div>
+  <%= render 'shared/foodcard' %>
+
+</div>
+<br>
+<%= link_to "Back to pairings", pairings_path, class: "sign-up back-pairings" %>

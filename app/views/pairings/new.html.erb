@@ -1,18 +1,21 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container">
+<div class="body1">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container">
 
-<%= simple_form_for @pairing do |f| %>
-  <%= f.association :movie, input_html: { class: 'select2' } %>
-  <%= f.input :food %>
-  <%= f.button :submit %>
-<% end %>
+  <%= simple_form_for @pairing do |f| %>
+    <%= f.association :movie, input_html: { class: 'select2' } %>
+    <%= f.input :food %>
+    <%= f.button :submit %>
+  <% end %>
+  </div>
+
 </div>

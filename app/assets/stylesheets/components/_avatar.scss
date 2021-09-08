@@ -1,6 +1,10 @@
 .avatar {
   width: 40px;
   border-radius: 50%;
+  cursor:pointer;
+}
+.avatar:hover {
+  transform: scale(1.1);
 }
 .avatar-large {
   width: 56px;

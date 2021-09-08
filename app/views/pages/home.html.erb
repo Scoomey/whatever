@@ -20,7 +20,7 @@
     <p class="description"> With our quick and easy survey we'll find you the perfect film for your night in. Simply input your favourite genres then filter movies by release year if desired- we'll make sure to create a perfect match every time.</p>
   </div>
 
-  <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel" data-interval="1000">
+  <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="mood-images" style="background-image: url(<%= image_path 'happy.png' %>)"></div>
@@ -37,9 +37,21 @@
 
 
 <div class="food">
-  <div class="food-images" style="background-image: url(<%= image_path 'food.png' %>)"></div>
+  <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="mood-images" style="background-image: url(<%= image_path 'food.png' %>)"></div>
+      </div>
+      <div class="carousel-item">
+        <div class="mood-images" style="background-image: url(<%= image_path 'food2.png' %>)"></div>
+      </div>
+      <div class="carousel-item">
+        <div class="mood-images" style="background-image: url(<%= image_path 'food3.png' %>)"></div>
+      </div>
+    </div>
+  </div>
     <div class="food-text">
-      <h1>Bring on the Food!</h1>
+      <h1>Bring on the food!</h1>
       <p> What goes better with a movie than the perfect meal? Our movie choice also comes with a stress-free food recommendation, filtered according to your preferences for a great pairing with every movie.</p>
     </div>
   </div>

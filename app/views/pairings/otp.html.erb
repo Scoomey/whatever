@@ -2,17 +2,16 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<div class="pairings_container" style="display: flex; justify-content: center">
+<h2 style="text-align: center; color: #f8f7f2; text-shadow: 2px 2px #810000; font-size: 50px;">It's a match!</h2>
+<div class="pairings_container" style="display: flex; justify-content: center; margin-top: 50px;">
   <%= render 'shared/moviecard' %>
   <div style="zindex: 3; align-self: center;">
 
     <%= image_tag 'movie-food-connectersrgb2.png' %>
 
-    <p class="saying" style="margin: 0 auto;"><%=@saying%></p>
+    <p class="saying" style="margin: 0 auto; margin-top: 75px; width: 350px; color: #f8f7f2;"><%=@saying%></p>
 
   </div>
   <%= render 'shared/foodcard' %>
 </div>
-    <div class="container"><%= link_to "Back to quiz", survey_path, class: "btn btn-danger " %></div>
+    <div class="container"><%= link_to "Back to quiz", survey_path, class: "sign-up" %></div>

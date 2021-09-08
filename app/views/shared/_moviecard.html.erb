@@ -2,14 +2,17 @@
   <div class="scene">
     <div class="movie_card">
       <div class="card__face card__face--back">
-        <h2> <%= @movies.title %></h5>
-        <p> <%= @genre %></p>
-        <h2> <%= @year%></h5>
-        <p><%= @plot %></p>
+        <div class="movie-card-back">
+          <a href="http://127.0.0.1:32400/web/index.html#!/server/ca33fa646bf46c9b4df20fb142df43327c5463d0/details?key=%2Flibrary%2Fmetadata%2F48105" target="_blank">
+            <h2> <%= @movies.title %> (<%= @year %>)</h2>
+            <p> <%= @genre %> </p>
+            <p> <%= @plot %> </p>
+          </a>
+        </div>
       </div>
       <div class="card__face card__face--front">
         <a href="http://127.0.0.1:32400/web/index.html#!/server/ca33fa646bf46c9b4df20fb142df43327c5463d0/details?key=%2Flibrary%2Fmetadata%2F48105" target="_blank">
-        <img src="<%= @poster%>"  alt="movie poster">
+          <img src="<%= @poster%>"  alt="movie poster">
         </a>
       </div>
     </div>

@@ -20,6 +20,9 @@
     color: #810000;
     font-size: 20px;
   }
+  a {
+    text-decoration-style: none;
+  }
 }
 h2 {
   margin: 0px 0px 0px 0px;
@@ -33,6 +36,22 @@ h2 {
   color: #d0d2c6;
   font-size: 15px;
 
+}
+
+.movie-card-back {
+  border: 3px solid #f8f7f2;
+  width: 300px;
+  height: 360px;
+  border-radius: 15px;
+  margin-left: -25px;
+  margin-top: -25px;
+  h2 {
+    padding-top: 20px;
+    font-size: 25px;
+  }
+  p {
+    font-size: 13px;
+  }
 }
 
 // a .movie_card img {
@@ -88,12 +107,16 @@ h2 {
       height: 100%;
       backface-visibility: hidden;
       transition: 1s ease-in-out;
+      // border: 3px solid #f8f7f2;
 
       img {
-        width: 240px;
-        height: 300px;
+        width: 300px;
+        height: 360px;
+        margin-left: -25px;
+        margin-top: -25px;
         object-fit: cover;
         border-radius: 15px;
+        border: 3px solid #f8f7f2;
       }
 
       &--back {

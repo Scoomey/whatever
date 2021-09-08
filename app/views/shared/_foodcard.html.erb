@@ -1,9 +1,19 @@
   <% result = @foods.dish.gsub(" ", "-")%>
-
-
-  <div class="food_card">
-    <h2><%= @foods.dish %></h2>
-    <%= link_to "https://spoonacular.com/recipes/#{result}-#{@foodid}" do %>
-      <img src=<%="#{@foods.image}"%> alt="movie poster" class="food-image">
-    <% end %>
+<div class="food-card">
+  <div class="scene">
+    <div class="food_card">
+      <div class="card__face card__face--back">
+        <div class="food-card-back">
+          <%= link_to "https://spoonacular.com/recipes/#{result}-#{@foodid}" do %>
+            <h2><%= @foods.dish %></h2>
+          <% end %>
+        </div>
+      </div>
+      <div class="card__face card__face--front">
+        <%= link_to "https://spoonacular.com/recipes/#{result}-#{@foodid}" do %>
+          <img src=<%="#{@foods.image}"%> alt="movie poster" class="food-image">
+        <% end %>
+      </div>
+    </div>
   </div>
+</div>

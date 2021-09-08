@@ -7,16 +7,15 @@
   justify-content: center;
   padding-top: 1em;
   }
-
 .pairings-card {
-  background-color: $darker-red;
+  // background-color: $darker-red;
   width: 250px;
   height: 175px;
   text-align: center;
   padding:10px 15px 10px 15px;
   margin: 10px 10px;
   color: $white;
-  background-image: linear-gradient(rgba(77, 76, 76, 0.5), rgba(0, 0, 0, 0.5)), asset_url("pairing.png");
+  background-image: /*linear-gradient(rgba(77, 76, 76, 0.5), rgba(0, 0, 0, 0.5)),*/ asset_url("popcornpairing4.png");
   background-size: cover;
   border-radius: 15px;
   display: flex;
@@ -32,22 +31,21 @@
     font-size: 15px;
     color: $white;
   }
-
 .pairing-daddy-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
-.pairingbannerimage {
-    height: 170vh;
-    width: 100%;
-    z-index: -3;
-    position: fixed;
-    top: -420px;
+.body1 {
     background-size: cover;
-    background-image: linear-gradient(rgba(77, 76, 76, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/food.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(117, 23, 23, 0.5)), url(/assets/8.png);
+    // background-image: linear-gradient(rgba(77, 76, 76, 0.2), rgba(0, 0, 0, 0.2)), url(/assets/8.png);
+    height: 100vh;
+  }
+  .button {
+    display: contents;
   }
 .back-pairings {
   text-align: center;

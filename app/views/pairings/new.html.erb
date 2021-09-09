@@ -12,9 +12,9 @@
   <div class="container">
 
   <%= simple_form_for @pairing do |f| %>
-    <%= f.association :movie, input_html: { class: 'select2' } %>
+    <%= f.input :movie, collection: Movie.all, input_html: { class: 'select2', autofocus: true  } %>
     <%= f.input :food %>
-    <%= f.button :button, type: :submit, class: 'sign-up' do %>
+    <%= f.button :button, type: :submit, class: 'sign-up pairbutton' do %>
       <span>Create pairing</span>
     <% end %>
   <% end %>

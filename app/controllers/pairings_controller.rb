@@ -13,7 +13,7 @@ class PairingsController < ApplicationController
   end
 
   def create
-    url2 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=5236b678dfcc495f878449b8915b61f9&diet&query=#{params[:pairing][:food]}&number=1"
+    url2 = "https://api.spoonacular.com/recipes/complexSearch?apiKey=e6c9e40f09434dc3963a25a5886a39c9&diet&query=#{params[:pairing][:food]}&number=1"
     food_url = URI.open(url2).read
     food_json = JSON.parse(food_url)
 

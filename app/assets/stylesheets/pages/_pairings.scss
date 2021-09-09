@@ -15,7 +15,7 @@
   padding:10px 15px 10px 15px;
   margin: 10px 10px;
   color: $white;
-  background-image: linear-gradient(rgba(77, 76, 76, 0.5), rgba(0, 0, 0, 0.5)), asset_url("popcornpairing4.png");
+  background-image: /*linear-gradient(rgba(77, 76, 76, 0.5), rgba(0, 0, 0, 0.5)),*/ asset_url("popcornpairing4.png");
   background-size: cover;
   border-radius: 15px;
   display: flex;
@@ -29,11 +29,11 @@
     font-size: 16px;
   }
     .name {
-    // font-size: 15px;
+    font-size: 15px;
     color: $white;
   }
 .pairing-daddy-container {
-    height: 50vh;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,7 +41,7 @@
 }
 .body1 {
     background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(117, 23, 23, 0.5)), asset_url("8");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(117, 23, 23, 0.5)), url(/assets/8.png);
     // background-image: linear-gradient(rgba(77, 76, 76, 0.2), rgba(0, 0, 0, 0.2)), url(/assets/8.png);
     height: 100vh;
   }

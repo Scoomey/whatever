@@ -1,6 +1,6 @@
 <div class="message-container" id="message-<%= message.id %>">
   <i class="author">
-      <p> <font style="color:#810000;"><%= message.user.nickname%></font> : <%= message.content %> </p>
+      <p> <font style="color:<%= message.user.color%>"><%= message.user.nickname%></font> : <%= message.content %> </p>
     <%# <small><%= message.created_at.strftime("%l:%M%p") %>
   </i>
 </div>

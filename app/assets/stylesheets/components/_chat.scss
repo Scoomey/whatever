@@ -18,9 +18,12 @@
 
 }
 
+#chatroomdaddy{
+  width: 100%;
+}
 
 .message-container {
-  overflow: scroll;
+  overflow-x: hidden;
   position: relative;
   max-width: 270px;
   width: 270px;

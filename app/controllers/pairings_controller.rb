@@ -21,7 +21,7 @@ class PairingsController < ApplicationController
     image = food_json['results'][0]["image"]
 
     @food = Food.create(dish: foodtitle, image: image)
-    @movie = Movie.find(params[:pairing][:movie_id])
+    @movie = Movie.find(params[:pairing][:movie])
     @pairing = Pairing.new(movie: @movie, food: @food)
     @pairing.user = current_user
     if @pairing.save

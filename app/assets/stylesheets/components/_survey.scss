@@ -46,12 +46,18 @@
 .fantasy + label {
   background-image: asset_url('fantasy.png') !important;
 }
+.fantasy + label:hover {
+  border: 3px solid #810000;
+}
 .fantasy:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('fantasy.png') !important;
   transition: ease-in 0.2s;
 }
 .thriller + label {
   background-image: asset_url('thriller.png') !important;
+}
+.thriller + label:hover {
+  border: 3px solid #810000;
 }
 .thriller:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('thriller.png') !important;
@@ -60,12 +66,18 @@
 .crime + label {
   background-image: asset_url('crime.png') !important;
 }
+.crime + label:hover {
+  border: 3px solid #810000;
+}
 .crime:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('crime.png') !important;
   transition: ease-in 0.2s;
 }
 .war + label {
   background-image: asset_url('war.png') !important;
+}
+.war + label:hover {
+  border: 3px solid #810000;
 }
 .war:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('war.png') !important;
@@ -74,12 +86,18 @@
 .action + label {
   background-image: asset_url('action.png') !important;
 }
+.action + label:hover {
+  border: 3px solid #810000;
+}
 .action:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('action.png') !important;
   transition: ease-in 0.2s;
 }
 .biography + label {
   background-image: asset_url('biography.png') !important;
+}
+.biography + label:hover {
+  border: 3px solid #810000;
 }
 .biography:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('biography.png') !important;
@@ -88,12 +106,18 @@
 .adventure + label {
   background-image: asset_url('adventure.png') !important;
 }
+.adventure + label:hover {
+  border: 3px solid #810000;
+}
 .adventure:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('adventure.png') !important;
   transition: ease-in 0.2s;
 }
 .history + label {
   background-image: asset_url('history.png') !important;
+}
+.history + label:hover {
+  border: 3px solid #810000;
 }
 .history:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('history.png') !important;
@@ -102,12 +126,18 @@
 .scifi + label {
   background-image: asset_url('scifi.png') !important;
 }
+.scifi + label:hover {
+  border: 3px solid #810000;
+}
 .scifi:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('scifi.png') !important;
   transition: ease-in 0.2s;
 }
 .romance + label {
   background-image: asset_url('romance.png') !important;
+}
+.romance + label:hover {
+  border: 3px solid #810000;
 }
 .romance:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('romance.png') !important;
@@ -116,12 +146,18 @@
 .western + label {
   background-image: asset_url('western.png') !important;
 }
+.western + label:hover {
+  border: 3px solid #810000;
+}
 .western:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('western.png') !important;
   transition: ease-in 0.2s;
 }
 .comedy + label {
   background-image: asset_url('comedy.png') !important;
+}
+.comedy + label:hover {
+  border: 3px solid #810000;
 }
 .comedy:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('comedy.png') !important;
@@ -130,12 +166,18 @@
 .animation + label {
   background-image: asset_url('animation.png') !important;
 }
+.animation + label:hover {
+  border: 3px solid #810000;
+}
 .animation:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('animation.png') !important;
   transition: ease-in 0.2s;
 }
 .family + label {
   background-image: asset_url('family.png') !important;
+}
+.family + label:hover {
+  border: 3px solid #810000;
 }
 .family:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('family.png') !important;
@@ -144,12 +186,18 @@
 .mystery + label {
   background-image: asset_url('mystery.png') !important;
 }
+.mystery + label:hover {
+  border: 3px solid #810000;
+}
 .mystery:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('mystery.png') !important;
   transition: ease-in 0.2s;
 }
 .music + label {
   background-image: asset_url('music.png') !important;
+}
+.music + label:hover {
+  border: 3px solid #810000;
 }
 .music:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('music.png') !important;
@@ -158,12 +206,18 @@
 .horror + label {
   background-image: asset_url('horror.png') !important;
 }
+.horror + label:hover {
+  border: 3px solid #810000;
+}
 .horror:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('horror.png') !important;
   transition: ease-in 0.2s;
 }
 .filmnoir + label {
   background-image: asset_url('filmnoir.png') !important;
+}
+.filmnoir + label:hover {
+  border: 3px solid #810000;
 }
 .filmnoir:checked + label {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), asset_url('filmnoir.png') !important;
@@ -172,10 +226,10 @@
 .checkbox:checked + label {
   color: #f8f7f2;
   border-radius: 10px;
-  padding-top: 40px;
+  padding-top: 35px;
   text-align: center;
   font-size: 40px;
-  transform: scale(95%);
+  transform: scale(87%);
   border: 3px solid #810000;
 }
 .slider-container {
